@@ -6,9 +6,31 @@ on:
       - main
       - "bootstrap/**"
       - "feature/**"
+      - "build/**"
+      - "ci/**"
+    paths:
+      - "project.godot"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/**"
+      - ".github/workflows/godot-smoke.yml"
   pull_request:
     branches:
       - main
+    paths:
+      - "project.godot"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/**"
+      - ".github/workflows/godot-smoke.yml"
+
+concurrency:
+  group: godot-smoke-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read

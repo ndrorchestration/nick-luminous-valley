@@ -4,7 +4,7 @@ A cozy science-fantasy farming, invention, village, and JRPG project built in Go
 
 ## Current development state
 
-The machine-verified bootstrap is merged to `main`. Active development is now the **vertical-slice v2** lane: a clearer, data-driven, more readable version of **Nick's First Spark: The Broken Water Pump**.
+The machine-verified bootstrap and vertical-slice v2 are merged to `main`. The current frontier is **human interactive acceptance**, followed by the first coherent production-art pass for **Nick's First Spark: The Broken Water Pump**.
 
 Core loop:
 
@@ -18,14 +18,14 @@ Core loop:
 4. Interact with Enter or Space.
 5. Save with F5 and load with F9.
 
-## What v2 adds
+## Current slice capabilities
 
 - data-driven objectives and interaction points from `data/vertical_slice.json`
 - named world zones: workshop yard, village green, grandfather's lab, creek/salvage path, and village garden
 - interaction prompts for nearby targets
-- clearer quest and inventory presentation
+- quest and inventory presentation
 - visible village-trust state
-- stronger before/after garden feedback
+- garden before/after feedback
 - transmission-tower completion effect
 - versioned save format
 - expanded headless acceptance tests
@@ -40,6 +40,8 @@ Core loop:
 - `docs/decision-log.md` — important decisions and rationale
 - `docs/verification.md` — what is actually verified
 - `docs/playtest-template.md` — human playtest evidence
+- `docs/windows-playtest.md` — packaged Windows build
+- `docs/visual-direction.md` — production-art direction and visual acceptance contract
 
 ## Verification
 

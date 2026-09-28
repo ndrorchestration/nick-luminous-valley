@@ -12,9 +12,9 @@ Vertical-slice v2 remains the current gameplay baseline at:
 
 `e2529d610e029df4c4f8e061bb7029bb4b83a6d5`
 
-Previous machine-verified bootstrap foundation:
+CI trigger optimization is merged at:
 
-`0bd1ff387415f4e599e8166615c12d82d69cf218`
+`2f009f3819796123ab6044e448ce34826ee82d2c`
 
 ## Current capabilities
 
@@ -37,6 +37,7 @@ Previous machine-verified bootstrap foundation:
 - GitHub Actions Windows playtest artifact pipeline
 - runtime-only CI path filters
 - concurrency cancellation for superseded smoke/export runs
+- documented production-art direction and visual acceptance contract
 
 ## Verification
 
@@ -47,13 +48,12 @@ Windows packaging verification: **#36496236186 — PASS**
 CI optimization verification:
 - Godot Smoke **#36496591783 — PASS**
 - Windows Playtest Build **#36496591715 — PASS**
-- optimization merged at `2f009f3819796123ab6044e448ce34826ee82d2c`
 
 Packaged artifact ID: `11003955591`
 
 Packaged artifact digest: `sha256:20dedfc3f8b60c61e044bb957093fb93e21433363443500e30507e487fb527da`
 
-This establishes technical runtime behavior for the merged v2 content. Human interactive acceptance remains separate.
+This establishes technical runtime behavior and reproducible packaging. Human interactive acceptance remains separate.
 
 ## Current gate
 
@@ -61,13 +61,15 @@ This establishes technical runtime behavior for the merged v2 content. Human int
 
 Issue #7 remains the primary quality gate for feel, readability, pacing, comprehension, and the transition into a production visual pass.
 
+The production-art handoff is documented in `docs/visual-direction.md` and its corresponding Notion visual-development brief. That documentation is design authority only; it does not establish implemented art.
+
 ## Next development order
 
-1. Download/run the Windows playtest artifact and complete human interactive acceptance
-2. Fix usability/readability defects
-3. First coherent production-art direction
-4. External playtest
-5. Decide whether a second invention loop is strong enough to justify broader farming/social systems
+1. Download/run the Windows playtest artifact and complete human interactive acceptance.
+2. Fix usability/readability defects.
+3. Execute the first coherent production-art pass against `docs/visual-direction.md`.
+4. External playtest.
+5. Decide whether a second invention loop is strong enough to justify broader farming/social systems.
 
 ## Explicit non-claims
 

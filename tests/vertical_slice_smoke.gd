@@ -20,9 +20,11 @@ func _run() -> void:
 	root.add_child(world)
 	await process_frame
 
+	_check(world.points.size() == 9, "Content model must load nine interaction points.")
 	_check(world.stage == 0, "Initial quest stage must be 0.")
 	_check(world.inventory.size() == 0, "Initial inventory must be empty.")
 	_check(world.world_changed == false, "Garden must begin unchanged.")
+	_check(world.village_trust == 0, "Village trust must begin at 0.")
 
 	world.player_position = Vector2(260, 150)
 	world._interact()
@@ -54,6 +56,7 @@ func _run() -> void:
 	world._interact()
 	_check(world.stage == 4, "Pump installation must advance stage 3 -> 4.")
 	_check(world.world_changed == true, "Pump installation must change world state.")
+	_check(world.village_trust == 1, "Pump installation must increase village trust.")
 
 	world.player_position = Vector2(510, 270)
 	world._interact()
@@ -64,12 +67,14 @@ func _run() -> void:
 	world.stage = 0
 	world.inventory = {}
 	world.world_changed = false
+	world.village_trust = 0
 	world.player_position = Vector2.ZERO
 	world._load_game()
 
 	_check(world.stage == 5, "Load must restore quest stage.")
 	_check(world.inventory.size() == 4, "Load must restore collected parts.")
 	_check(world.world_changed == true, "Load must restore world-change state.")
+	_check(world.village_trust == 1, "Load must restore village trust.")
 	_check(world.player_position.is_equal_approx(saved_position), "Load must restore player position.")
 
 	_finish()
@@ -79,7 +84,6 @@ func _finish() -> void:
 		print("VERTICAL_SLICE_SMOKE: PASS")
 		quit(0)
 		return
-
 	for failure in failures:
 		push_error("VERTICAL_SLICE_SMOKE: " + failure)
 	print("VERTICAL_SLICE_SMOKE: FAIL (%d)" % failures.size())

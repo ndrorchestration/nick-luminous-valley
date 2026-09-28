@@ -5,10 +5,33 @@ on:
     branches:
       - main
       - "build/**"
+      - "ci/**"
+    paths:
+      - "project.godot"
+      - "export_presets.cfg"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/**"
+      - ".github/workflows/windows-playtest.yml"
   pull_request:
     branches:
       - main
+    paths:
+      - "project.godot"
+      - "export_presets.cfg"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/**"
+      - ".github/workflows/windows-playtest.yml"
   workflow_dispatch:
+
+concurrency:
+  group: windows-playtest-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read

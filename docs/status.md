@@ -4,7 +4,11 @@ Date: 2026-09-28
 
 ## Main
 
-Vertical-slice v2 is merged to `main` at:
+Windows-playtest packaging is merged to `main` at:
+
+`468d3215aa12b6a950ad83ed91651dffc63081a2`
+
+Vertical-slice v2 remains the current gameplay baseline at:
 
 `e2529d610e029df4c4f8e061bb7029bb4b83a6d5`
 
@@ -29,10 +33,18 @@ Previous machine-verified bootstrap foundation:
 - named world zones and improved procedural feedback
 - feature-branch Godot CI
 - synchronized project documentation
+- reproducible Windows Desktop export preset
+- GitHub Actions Windows playtest artifact pipeline
 
 ## Verification
 
-Latest pre-merge v2 Godot 4.7.2 run: **#36494912875 — PASS**
+Latest gameplay verification: **#36494912875 — PASS**
+
+Windows packaging verification: **#36496236186 — PASS**
+
+Packaged artifact ID: `11003955591`
+
+Packaged artifact digest: `sha256:20dedfc3f8b60c61e044bb957093fb93e21433363443500e30507e487fb527da`
 
 This establishes technical runtime behavior for the merged v2 content. Human interactive acceptance remains separate.
 
@@ -44,7 +56,7 @@ Issue #7 remains the primary quality gate for feel, readability, pacing, compreh
 
 ## Next development order
 
-1. Human interactive acceptance
+1. Download/run the Windows playtest artifact and complete human interactive acceptance
 2. Fix usability/readability defects
 3. First coherent production-art direction
 4. External playtest

@@ -46,3 +46,11 @@ Core loop:
 Godot 4.7.2 CI currently verifies project import, main-scene launch, content loading, quest progression, missing-part gating, four-part collection, pump installation, village-trust change, tower completion, and save/load restoration.
 
 Human interactive acceptance is separate and still required. Passing CI does not establish pacing, clarity, feel, emotional impact, fun, or visual quality.
+
+## Windows playtest build
+
+A reproducible Windows Desktop export pipeline is merged to `main` at `468d3215aa12b6a950ad83ed91651dffc63081a2`.
+
+GitHub Actions run `#36496236186` successfully imported the project, ran the vertical-slice acceptance suite, exported `NicksLuminousValley.exe`, verified the file, and uploaded a Windows playtest artifact.
+
+See `docs/windows-playtest.md` for artifact and local acceptance details.

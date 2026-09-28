@@ -36,3 +36,6 @@ jobs:
 
       - name: Launch main scene headlessly
         run: godot --headless --path . --quit-after 3
+
+      - name: Exercise vertical slice state machine
+        run: godot --headless --path . --script tests/vertical_slice_smoke.gd

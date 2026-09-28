@@ -65,6 +65,29 @@ Established:
 
 Packaging evidence establishes reproducible build generation, not interactive play quality.
 
+## Art-ready runtime refactor evidence
+
+Environment: Godot 4.7.2 on GitHub Actions
+
+Godot Smoke run: **#36499794753 — PASS**  
+Windows Playtest Build run: **#36499794719 — PASS**
+
+Established:
+- HUD extraction preserves runtime composition
+- world renderer extraction preserves gameplay presentation path
+- save-store extraction preserves save/load behavior
+- existing quest-state transitions remain unchanged
+- project import remains green
+- main-scene launch remains green
+- vertical-slice acceptance remains green
+- Windows export remains green
+
+Merged to `main` at:
+
+`87cc62a72c56493e72b1fe7a486b465851011887`
+
+This establishes a technically verified replacement seam for visual/UI/persistence iteration. It does not establish production-art quality or human acceptance.
+
 ## Not established
 
 Automated CI does **not** establish:

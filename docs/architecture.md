@@ -14,15 +14,30 @@ This file is the canonical technical architecture. `docs/vertical-slice.md` defi
 
 ## Current runtime shape
 
-`project.godot` launches `scenes/world/main.tscn`, which currently attaches `scripts/world/main.gd`.
+`project.godot` launches `scenes/world/main.tscn`, which attaches `scripts/world/main.gd`.
 
-The v2 slice deliberately keeps one world controller while the experience is still small. It now separates content from behavior:
+The vertical-slice runtime is now split along boundaries required for the production-art phase:
 
-- `data/vertical_slice.json` — objectives, interaction-point identity, labels, hints, and positions
-- `scripts/world/main.gd` — movement, interaction rules, state transitions, UI, procedural presentation, save/load
+- `data/vertical_slice.json` — objectives and interaction metadata
+- `scripts/world/main.gd` — movement, interaction rules, quest-state orchestration, and composition
+- `scripts/world/world_renderer.gd` — replaceable world presentation layer
+- `scripts/ui/hud.gd` — player-facing HUD and interaction text
+- `scripts/systems/save_store.gd` — persistence I/O boundary
 - `tests/vertical_slice_smoke.gd` — machine-verifiable behavioral contract
 
-This is a controlled intermediate architecture, not the intended final game structure.
+Quest semantics intentionally remain owned by `main.gd` for now. The refactor separates the volatile presentation and I/O surfaces without changing the established stage model.
+
+## Why the art-ready split exists
+
+The original v2 controller owned movement, quest transitions, persistence, UI construction, and procedural drawing. That was acceptable for proving the loop, but production-art work would require repeated edits to the same gameplay controller.
+
+The art-ready split creates three replacement seams:
+
+1. world art can replace `world_renderer.gd` without changing quest logic;
+2. UI styling can replace or extend `hud.gd` without changing gameplay state;
+3. persistence changes can evolve behind `save_store.gd`.
+
+This satisfies the previously documented refactor trigger: presentation had become a material obstacle to iteration.
 
 ## State model
 
@@ -48,22 +63,24 @@ The loader:
 - clamps quest stage to the currently supported range
 - restores missing village-trust state from legacy world state
 
+`save_store.gd` owns file access and JSON decoding/encoding. `main.gd` owns interpretation of supported save fields and migration behavior.
+
 ## Content boundary
 
-The first data extraction is established because objectives and interaction metadata are reused by both player-facing presentation and acceptance tests. Do not build a general-purpose content framework yet.
+Objectives and interaction metadata live in `data/vertical_slice.json`. Do not build a general-purpose content framework until repeated gameplay demonstrates stable reusable structures.
 
 ## Presentation boundary
 
-The v2 world uses procedural Godot drawing rather than production art. This is intentional: world zones, affordances, feedback, and state changes can now be judged before committing to an asset pipeline.
+The current renderer remains procedural and is not production art. Its purpose is now explicitly transitional: preserve a machine-verifiable presentation while giving the art pass a replaceable surface.
 
 ## Verification boundary
 
 CI establishes importability and scripted runtime behavior. It does not establish input feel, player comprehension, pacing, art quality, emotional effect, or fun.
 
-## Refactor trigger
+## Next refactor trigger
 
-Split `main.gd` into dedicated player, quest, UI, persistence, and world-presentation components when either:
-1. a second playable quest introduces duplicated responsibilities, or
-2. the current controller becomes a material obstacle to testing or iteration.
+Move quest-state semantics out of `main.gd` only when:
+1. a second playable quest creates repeated transition logic; or
+2. quest behavior itself becomes difficult to test or author in the current controller.
 
-Refactor because a boundary is demonstrated, not because abstraction is aesthetically attractive.
+Do not generalize beyond demonstrated reuse.

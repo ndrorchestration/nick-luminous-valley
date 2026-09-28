@@ -20,6 +20,8 @@ func _run() -> void:
 	root.add_child(world)
 	await process_frame
 
+	_check(world.hud != null, "HUD must be composed as a dedicated runtime component.")
+	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
 	_check(world.points.size() == 9, "Content model must load nine interaction points.")
 	_check(world.stage == 0, "Initial quest stage must be 0.")
 	_check(world.inventory.size() == 0, "Initial inventory must be empty.")

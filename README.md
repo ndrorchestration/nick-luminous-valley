@@ -24,3 +24,18 @@ The bootstrap build uses placeholder geometry and labels so interaction, quest s
 
 ## Development rule
 AI-generated code is not accepted because it looks plausible. A change is accepted when it runs in Godot and satisfies the relevant acceptance criteria.
+
+
+## Verification status
+
+Automated runtime verification is established on Godot 4.7.2 via GitHub Actions:
+- project import
+- main-scene launch
+- quest progression
+- missing-part gate
+- component collection
+- pump/world-state transition
+- tower completion state
+- save/load restoration
+
+Human interactive acceptance is still pending and is tracked separately from automated correctness.

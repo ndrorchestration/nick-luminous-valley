@@ -40,3 +40,9 @@
 ## 2026-09-28 — Separate machine evidence from human judgment
 **Decision:** CI PASS may establish runtime correctness only; human play remains required for feel, comprehension, pacing, emotional impact, and fun.
 **Reason:** These are different claim types and need different evidence.
+
+
+## 2026-09-28 — Art-ready runtime boundary split
+**Decision:** Extract HUD, world presentation, and persistence I/O while keeping quest-state semantics in `main.gd`.
+**Reason:** Production-art iteration had become a demonstrated source of churn risk in the monolithic controller. The split creates replaceable seams without prematurely generalizing quest architecture.
+**Evidence:** Godot Smoke #36499794753 PASS; Windows Playtest Build #36499794719 PASS.

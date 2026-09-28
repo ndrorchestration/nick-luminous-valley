@@ -16,6 +16,10 @@ CI trigger optimization is merged at:
 
 `2f009f3819796123ab6044e448ce34826ee82d2c`
 
+Art-ready runtime refactor is merged at:
+
+`87cc62a72c56493e72b1fe7a486b465851011887`
+
 ## Current capabilities
 
 - controllable top-down player marker
@@ -38,6 +42,9 @@ CI trigger optimization is merged at:
 - runtime-only CI path filters
 - concurrency cancellation for superseded smoke/export runs
 - documented production-art direction and visual acceptance contract
+- dedicated HUD presentation boundary
+- dedicated world-renderer presentation boundary
+- dedicated save-store I/O boundary
 
 ## Verification
 
@@ -48,6 +55,10 @@ Windows packaging verification: **#36496236186 — PASS**
 CI optimization verification:
 - Godot Smoke **#36496591783 — PASS**
 - Windows Playtest Build **#36496591715 — PASS**
+
+Art-ready runtime refactor verification:
+- Godot Smoke **#36499794753 — PASS**
+- Windows Playtest Build **#36499794719 — PASS**
 
 Packaged artifact ID: `11003955591`
 

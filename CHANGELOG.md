@@ -1,5 +1,22 @@
 # Changelog
 
+## Incremental production-art ingestion — merged 2026-09-28
+
+Main commit: `4b6bcaa6a1628b4578926e550aa8078a42bbc9e1`
+
+### Added
+- versioned visual asset manifest
+- safe texture loader
+- per-slot art replacement hooks
+- procedural fallback for missing assets
+- asset-ingestion contract
+- runtime asset-layout documentation
+
+### Verified
+- Godot Smoke #36500157438 — PASS
+- Windows Playtest Build #36500157460 — PASS
+
+
 ## Art-ready runtime refactor — merged 2026-09-28
 
 Main commit: `87cc62a72c56493e72b1fe7a486b465851011887`

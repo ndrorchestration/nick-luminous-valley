@@ -32,8 +32,9 @@
 - establish human acceptance
 
 ## M3 — First coherent visual identity
-**Status:** QUEUED
+**Status:** PIPELINE READY / HUMAN ACCEPTANCE GATED
 
+- asset-ingestion contract — COMPLETE
 - protagonist sprite direction
 - Mira and Sora silhouettes/portraits
 - tiles/ground treatment

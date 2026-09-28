@@ -35,12 +35,19 @@ Previous machine-verified bootstrap foundation:
 - synchronized project documentation
 - reproducible Windows Desktop export preset
 - GitHub Actions Windows playtest artifact pipeline
+- runtime-only CI path filters
+- concurrency cancellation for superseded smoke/export runs
 
 ## Verification
 
 Latest gameplay verification: **#36494912875 — PASS**
 
 Windows packaging verification: **#36496236186 — PASS**
+
+CI optimization verification:
+- Godot Smoke **#36496591783 — PASS**
+- Windows Playtest Build **#36496591715 — PASS**
+- optimization merged at `2f009f3819796123ab6044e448ce34826ee82d2c`
 
 Packaged artifact ID: `11003955591`
 

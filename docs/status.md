@@ -20,6 +20,10 @@ Art-ready runtime refactor is merged at:
 
 `87cc62a72c56493e72b1fe7a486b465851011887`
 
+Incremental production-art ingestion is merged at:
+
+`4b6bcaa6a1628b4578926e550aa8078a42bbc9e1`
+
 ## Current capabilities
 
 - controllable top-down player marker
@@ -45,6 +49,9 @@ Art-ready runtime refactor is merged at:
 - dedicated HUD presentation boundary
 - dedicated world-renderer presentation boundary
 - dedicated save-store I/O boundary
+- versioned visual-asset manifest
+- safe per-slot texture loading
+- procedural fallback for partial art sets
 
 ## Verification
 
@@ -59,6 +66,10 @@ CI optimization verification:
 Art-ready runtime refactor verification:
 - Godot Smoke **#36499794753 — PASS**
 - Windows Playtest Build **#36499794719 — PASS**
+
+Asset-ingestion verification:
+- Godot Smoke **#36500157438 — PASS**
+- Windows Playtest Build **#36500157460 — PASS**
 
 Packaged artifact ID: `11003955591`
 

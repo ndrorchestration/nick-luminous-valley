@@ -20,9 +20,10 @@ Foundation merged to `main` at commit `0bd1ff387415f4e599e8166615c12d82d69cf218`
 
 ## Vertical-slice v2 evidence
 
-Environment: Godot 4.7.2 on GitHub Actions  
-Run: **#36494569694**  
-Result: **PASS**
+Environment: Godot 4.7.2 on GitHub Actions
+
+Implementation run: **#36494569694 — PASS**  
+Final branch-head run: **#36494912875 — PASS**
 
 Established for v2:
 - project import
@@ -40,6 +41,10 @@ Established for v2:
 - village-trust increase
 - tower completion
 - save/load restoration including trust and position
+
+Vertical-slice v2 merged to `main` at commit:
+
+`e2529d610e029df4c4f8e061bb7029bb4b83a6d5`
 
 ## Not established
 

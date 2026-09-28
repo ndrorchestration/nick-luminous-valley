@@ -59,7 +59,7 @@ func _run() -> void:
 	world._interact()
 	_check(world.stage == 5, "Tower interaction must complete the vertical slice.")
 
-	var saved_position := world.player_position
+	var saved_position: Vector2 = world.player_position
 	world._save_game()
 	world.stage = 0
 	world.inventory = {}

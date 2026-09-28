@@ -1,5 +1,23 @@
 # Changelog
 
+## Windows playtest packaging — merged 2026-09-28
+
+Main commit: `468d3215aa12b6a950ad83ed91651dffc63081a2`
+
+### Added
+- Windows Desktop export preset
+- Godot 4.7.2 export-template packaging workflow
+- pre-export vertical-slice acceptance
+- exported executable existence check
+- uploaded Windows playtest artifact
+- Windows playtest documentation
+
+### Verified
+- GitHub Actions run #36496236186 — PASS
+- artifact ID `11003955591`
+- artifact digest `sha256:20dedfc3f8b60c61e044bb957093fb93e21433363443500e30507e487fb527da`
+
+
 ## Vertical slice v2 — merged 2026-09-28
 
 Main commit: `e2529d610e029df4c4f8e061bb7029bb4b83a6d5`

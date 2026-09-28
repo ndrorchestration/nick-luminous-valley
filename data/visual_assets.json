@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "pixel_scale": 1,
+  "slots": {
+    "player": {"path": "", "size": [32, 32]},
+    "mira": {"path": "", "size": [32, 32]},
+    "sora": {"path": "", "size": [32, 32]},
+    "wire": {"path": "", "size": [20, 20]},
+    "solar": {"path": "", "size": [20, 20]},
+    "pipe": {"path": "", "size": [20, 20]},
+    "resin": {"path": "", "size": [20, 20]},
+    "lab": {"path": "", "size": [40, 40]},
+    "pump": {"path": "", "size": [40, 40]},
+    "tower": {"path": "", "size": [48, 72]},
+    "zone_workshop": {"path": "", "rect": [38, 108, 250, 142]},
+    "zone_green": {"path": "", "rect": [320, 92, 255, 116]},
+    "zone_lab": {"path": "", "rect": [640, 104, 270, 130]},
+    "zone_creek": {"path": "", "rect": [70, 360, 590, 64]},
+    "garden_before": {"path": "", "rect": [698, 250, 222, 192]},
+    "garden_after": {"path": "", "rect": [698, 250, 222, 192]}
+  }
+}

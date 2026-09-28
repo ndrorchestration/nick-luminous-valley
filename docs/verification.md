@@ -46,6 +46,25 @@ Vertical-slice v2 merged to `main` at commit:
 
 `e2529d610e029df4c4f8e061bb7029bb4b83a6d5`
 
+## Windows packaging evidence
+
+Environment: Godot 4.7.2 + export templates on GitHub Actions  
+Run: **#36496236186**  
+Result: **PASS**
+
+Established:
+- project import before packaging
+- vertical-slice acceptance before packaging
+- Windows Desktop export succeeds
+- `NicksLuminousValley.exe` exists after export
+- artifact upload succeeds
+- artifact ID: `11003955591`
+- artifact size: `38,936,427` bytes
+- artifact digest: `sha256:20dedfc3f8b60c61e044bb957093fb93e21433363443500e30507e487fb527da`
+- packaging pipeline merged to `main` at `468d3215aa12b6a950ad83ed91651dffc63081a2`
+
+Packaging evidence establishes reproducible build generation, not interactive play quality.
+
 ## Not established
 
 Automated CI does **not** establish:

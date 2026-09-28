@@ -1,5 +1,30 @@
 # Changelog
 
+## Art-ready runtime refactor — merged 2026-09-28
+
+Main commit: `87cc62a72c56493e72b1fe7a486b465851011887`
+
+### Added / separated
+- dedicated HUD presentation component
+- dedicated world-renderer presentation component
+- dedicated persistence I/O component
+
+### Preserved
+- movement
+- quest progression
+- incomplete-repair gating
+- component collection
+- pump/world-state transition
+- village-trust change
+- tower completion
+- save/load
+- Windows packaging
+
+### Verified
+- Godot Smoke #36499794753 — PASS
+- Windows Playtest Build #36499794719 — PASS
+
+
 ## CI efficiency — merged 2026-09-28
 
 Main commit: `2f009f3819796123ab6044e448ce34826ee82d2c`

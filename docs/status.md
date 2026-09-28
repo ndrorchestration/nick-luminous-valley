@@ -4,16 +4,13 @@ Date: 2026-09-28
 
 ## Main
 
-Machine-verified bootstrap foundation is merged to `main` at:
+Vertical-slice v2 is merged to `main` at:
+
+`e2529d610e029df4c4f8e061bb7029bb4b83a6d5`
+
+Previous machine-verified bootstrap foundation:
 
 `0bd1ff387415f4e599e8166615c12d82d69cf218`
-
-## Active development
-
-Branch: `feature/vertical-slice-v2`  
-PR: #8 — Develop vertical slice v2
-
-Automated Godot 4.7.2 run #36494569694: **PASS**
 
 ## Current capabilities
 
@@ -30,6 +27,14 @@ Automated Godot 4.7.2 run #36494569694: **PASS**
 - versioned save/load
 - data-driven objective and interaction metadata
 - named world zones and improved procedural feedback
+- feature-branch Godot CI
+- synchronized project documentation
+
+## Verification
+
+Latest pre-merge v2 Godot 4.7.2 run: **#36494912875 — PASS**
+
+This establishes technical runtime behavior for the merged v2 content. Human interactive acceptance remains separate.
 
 ## Current gate
 

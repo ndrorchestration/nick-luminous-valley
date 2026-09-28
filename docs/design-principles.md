@@ -8,5 +8,7 @@
 6. **Cozy does not mean frictionless:** problems may require thought, tradeoffs, and revisiting assumptions.
 7. **Mystery earns expansion:** larger lore appears after the player has a grounded reason to care about the valley.
 8. **Content over framework:** do not generalize a system until repeated content demonstrates the need.
-9. **Readable state:** objectives, inventory state, and world changes should be understandable without external explanation.
-10. **Runtime evidence wins:** a feature is accepted because it works and feels coherent in play, not because its implementation sounds plausible.
+9. **Readable state:** objectives, inventory state, interaction affordances, and world changes should be understandable without external explanation.
+10. **Runtime evidence wins:** a feature is technically accepted because it works under the relevant test, not because its implementation sounds plausible.
+11. **Human judgment stays human:** pacing, feel, clarity, emotional effect, and fun require actual play rather than proxy metrics.
+12. **Prototype composition before asset fidelity:** prove spatial hierarchy and feedback using fast procedural presentation before committing to production art.

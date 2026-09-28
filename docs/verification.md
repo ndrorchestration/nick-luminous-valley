@@ -1,31 +1,51 @@
 # Verification Ledger
 
-## Automated runtime evidence
+## Foundation evidence
 
-Environment: Godot 4.7.2 on GitHub Actions
+Environment: Godot 4.7.2 on GitHub Actions  
+Run: **#36493110377**  
+Result: **PASS**
 
-Run: #36493110377
+Established for the bootstrap:
+- project import
+- main-scene launch
+- quest progression
+- incomplete-repair gate
+- four-part collection
+- pump/world-state transition
+- tower completion
+- save/load restoration
 
-Status: PASS
+Foundation merged to `main` at commit `0bd1ff387415f4e599e8166615c12d82d69cf218`.
 
-Verified:
-- Project imports successfully.
-- Main scene launches headlessly.
-- Mira advances stage 0 → 1.
-- Sora advances stage 1 → 2.
-- Three collected parts remain insufficient at the lab.
-- The fourth part completes the component requirement.
-- Lab progression advances stage 2 → 3.
-- Pump installation advances stage 3 → 4.
-- Pump installation changes persistent world state.
-- Tower interaction advances stage 4 → 5.
-- Save/load restores quest stage, inventory, world state, and player position.
+## Vertical-slice v2 evidence
+
+Environment: Godot 4.7.2 on GitHub Actions  
+Run: **#36494569694**  
+Result: **PASS**
+
+Established for v2:
+- project import
+- main-scene launch
+- JSON content loading
+- nine interaction points available
+- Mira stage transition
+- Sora stage transition
+- three-part incomplete state
+- missing-part lab rejection
+- fourth-part completion
+- lab repair transition
+- pump installation
+- persistent world-state change
+- village-trust increase
+- tower completion
+- save/load restoration including trust and position
 
 ## Not established
 
-The following are intentionally not claimed by automated CI:
+Automated CI does **not** establish:
 - input feel
-- visual readability in a real window
+- visual readability in a real game window
 - pacing
 - player comprehension without coaching
 - emotional impact
@@ -33,4 +53,4 @@ The following are intentionally not claimed by automated CI:
 - production-art quality
 - external-player acceptance
 
-Those require interactive human play and are tracked separately.
+These require interactive human play. See issue #7 and `docs/playtest-template.md`.

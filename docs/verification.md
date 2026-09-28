@@ -88,6 +88,27 @@ Merged to `main` at:
 
 This establishes a technically verified replacement seam for visual/UI/persistence iteration. It does not establish production-art quality or human acceptance.
 
+## Asset-ingestion contract evidence
+
+Environment: Godot 4.7.2 on GitHub Actions
+
+Godot Smoke run: **#36500157438 — PASS**  
+Windows Playtest Build run: **#36500157460 — PASS**
+
+Established:
+- visual manifest schema version 1 loads successfully
+- every current art slot may remain empty
+- empty/missing art slots safely fall back to procedural rendering
+- gameplay state-machine behavior remains green
+- save/load remains green
+- Windows export remains green
+
+Merged to `main` at:
+
+`4b6bcaa6a1628b4578926e550aa8078a42bbc9e1`
+
+This establishes the mechanism for incremental production-art replacement. It does not establish that any production art has been authored, accepted, or visually validated.
+
 ## Not established
 
 Automated CI does **not** establish:

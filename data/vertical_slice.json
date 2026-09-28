@@ -1,0 +1,22 @@
+{
+  "title": "Nick's First Spark: The Broken Water Pump",
+  "objectives": [
+    "Talk to Mira in the workshop yard.",
+    "Find Sora near the village garden.",
+    "Recover four repair components, then return to the Lab Bench.",
+    "Install the repaired solar-assisted pump in the garden.",
+    "Investigate the Transmission Tower.",
+    "Vertical slice complete."
+  ],
+  "points": [
+    {"id":"mira","name":"Mira","kind":"npc","pos":[260,150],"hint":"Talk to Mira"},
+    {"id":"sora","name":"Sora","kind":"npc","pos":[430,120],"hint":"Talk to Sora"},
+    {"id":"wire","name":"Copper Wire","kind":"item","pos":[170,410],"hint":"Collect Copper Wire"},
+    {"id":"solar","name":"Cracked Solar Cell","kind":"item","pos":[360,390],"hint":"Collect Cracked Solar Cell"},
+    {"id":"pipe","name":"Pipe Fitting","kind":"item","pos":[560,410],"hint":"Collect Pipe Fitting"},
+    {"id":"resin","name":"Resin","kind":"item","pos":[710,350],"hint":"Collect Resin"},
+    {"id":"lab","name":"Lab Bench","kind":"station","pos":[700,160],"hint":"Use Lab Bench"},
+    {"id":"pump","name":"Garden Pump","kind":"station","pos":[820,285],"hint":"Inspect Garden Pump"},
+    {"id":"tower","name":"Transmission Tower","kind":"station","pos":[510,270],"hint":"Inspect Transmission Tower"}
+  ]
+}

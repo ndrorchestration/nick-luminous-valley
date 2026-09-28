@@ -1,5 +1,20 @@
 # Changelog
 
+## CI efficiency — merged 2026-09-28
+
+Main commit: `2f009f3819796123ab6044e448ce34826ee82d2c`
+
+### Changed
+- smoke CI now runs only for runtime-relevant paths
+- Windows packaging now runs only for runtime/export-relevant paths
+- documentation-only commits no longer trigger Godot or Windows export jobs
+- superseded runs on the same ref are cancelled automatically
+
+### Verified
+- Godot Smoke run #36496591783 — PASS
+- Windows Playtest Build run #36496591715 — PASS
+
+
 ## Windows playtest packaging — merged 2026-09-28
 
 Main commit: `468d3215aa12b6a950ad83ed91651dffc63081a2`

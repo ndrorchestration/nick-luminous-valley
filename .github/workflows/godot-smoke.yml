@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - "bootstrap/**"
+      - "feature/**"
   pull_request:
     branches:
       - main

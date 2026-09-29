@@ -1,37 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="142" viewBox="0 0 250 142" shape-rendering="crispEdges">
 <rect width="250" height="142" fill="#294936"/>
-<rect y="96" width="250" height="46" fill="#4f3c2d"/>
-<rect x="12" y="20" width="86" height="60" fill="#6b4b34"/>
-<rect x="20" y="28" width="70" height="42" fill="#2e3f37"/>
-<rect x="108" y="18" width="118" height="14" fill="#8a6a46"/>
-<rect x="116" y="32" width="102" height="10" fill="#5f4934"/>
-<rect x="126" y="52" width="18" height="24" fill="#b98a47"/>
-<rect x="148" y="48" width="34" height="28" fill="#748a8d"/>
-<rect x="186" y="54" width="22" height="22" fill="#c6a35b"/>
-<rect x="118" y="86" width="98" height="10" fill="#73523b"/>
-<rect x="132" y="96" width="8" height="28" fill="#4a392d"/>
-<rect x="194" y="96" width="8" height="28" fill="#4a392d"/>
-<rect x="28" y="108" width="38" height="10" fill="#6d7e76"/>
-<rect x="34" y="101" width="26" height="7" fill="#9ea98f"/>
-<rect x="212" y="104" width="20" height="20" fill="#75664d"/>
-<rect x="216" y="108" width="12" height="12" fill="#d0b667"/>
+<!-- JRPG/cartoon convergence v1: bolder workshop silhouette, chunkier props, warm hand-authored clutter. -->
+<rect y="96" width="250" height="46" fill="#5a432e"/>
+<rect x="8" y="18" width="94" height="66" fill="#3d2b24"/>
+<rect x="14" y="14" width="82" height="10" fill="#87613e"/>
+<rect x="18" y="26" width="70" height="44" fill="#263a32"/>
+<rect x="24" y="32" width="10" height="30" fill="#49695d"/>
+<rect x="76" y="32" width="6" height="30" fill="#172620"/>
+<rect x="108" y="18" width="120" height="16" fill="#9b744a"/>
+<rect x="116" y="34" width="104" height="10" fill="#674b35"/>
+<rect x="126" y="52" width="18" height="24" fill="#d39445"/>
+<rect x="148" y="48" width="34" height="28" fill="#78959a"/>
+<rect x="186" y="54" width="24" height="22" fill="#d5b85e"/>
+<rect x="118" y="86" width="100" height="12" fill="#7d573c"/>
+<rect x="132" y="98" width="8" height="28" fill="#3f2f26"/>
+<rect x="194" y="98" width="8" height="28" fill="#3f2f26"/>
+<rect x="26" y="106" width="42" height="12" fill="#5f7772"/>
+<rect x="34" y="98" width="28" height="8" fill="#b9c1a0"/>
+<rect x="208" y="102" width="24" height="24" fill="#6e6049"/>
+<rect x="214" y="108" width="12" height="12" fill="#f0cf65"/>
+<rect x="18" y="124" width="46" height="5" fill="#8b6844"/>
+<rect x="76" y="122" width="28" height="6" fill="#a76c40"/>
+<rect x="108" y="112" width="18" height="8" fill="#c47e45"/>
+<rect x="224" y="88" width="14" height="32" fill="#334b43"/>
 
-<!-- Environment detail v3: workshop material and tool language. -->
-<g opacity="0.92">
-  <rect x="26" y="34" width="4" height="28" fill="#385247"/>
-  <rect x="80" y="34" width="4" height="28" fill="#24362f"/>
-  <rect x="154" y="55" width="4" height="21" fill="#9fb0aa"/>
-  <rect x="164" y="55" width="4" height="21" fill="#5f7578"/>
-  <rect x="174" y="55" width="4" height="21" fill="#9fb0aa"/>
-  <rect x="190" y="58" width="14" height="3" fill="#e2c978"/>
+<g opacity="0.96">
+  <rect x="154" y="55" width="4" height="21" fill="#c1d2cc"/>
+  <rect x="164" y="55" width="4" height="21" fill="#536d72"/>
+  <rect x="174" y="55" width="4" height="21" fill="#c1d2cc"/>
+  <rect x="190" y="58" width="14" height="3" fill="#f1d277"/>
   <rect x="190" y="65" width="14" height="3" fill="#8a713f"/>
-  <rect x="122" y="89" width="18" height="3" fill="#b27745"/>
-  <rect x="146" y="88" width="12" height="4" fill="#7e9b92"/>
-  <rect x="164" y="88" width="18" height="3" fill="#c4aa63"/>
+  <rect x="122" y="89" width="18" height="3" fill="#c27d49"/>
+  <rect x="146" y="88" width="12" height="4" fill="#8ab0a0"/>
+  <rect x="164" y="88" width="18" height="3" fill="#dfc266"/>
   <rect x="70" y="114" width="18" height="5" fill="#7d5740"/>
-  <rect x="92" y="118" width="10" height="4" fill="#a56d44"/>
+  <rect x="92" y="118" width="10" height="4" fill="#c07a43"/>
+  <rect x="52" y="84" width="10" height="6" fill="#f0cb63"/>
+  <rect x="64" y="84" width="5" height="6" fill="#79d0c1"/>
 </g>
-<path d="M102 68 C112 60 120 65 126 72 S144 82 154 72" fill="none" stroke="#b87345" stroke-width="2" opacity="0.8"/>
-<path d="M214 116 h12 v-6 h8" fill="none" stroke="#e2c978" stroke-width="2" opacity="0.72"/>
-
+<path d="M102 68 C112 60 120 65 126 72 S144 82 154 72" fill="none" stroke="#d8874a" stroke-width="3" opacity="0.86"/>
+<path d="M214 116 h12 v-6 h8" fill="none" stroke="#f1d277" stroke-width="2" opacity="0.78"/>
+<path d="M30 80 h34 l5 -7 h18" fill="none" stroke="#a06a46" stroke-width="3" opacity="0.68"/>
 </svg>

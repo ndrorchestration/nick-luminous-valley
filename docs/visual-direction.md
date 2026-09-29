@@ -8,7 +8,7 @@ The first authored visual candidate set is now mechanically implemented. This do
 
 ## Current implementation state
 
-The current visual manifest has **16/16 populated candidate slots**:
+The current visual manifest has **17/17 populated candidate slots**, including a cohesive full-field world-base layer:
 
 Characters:
 - Nick
@@ -42,8 +42,10 @@ Technical evidence:
 - character pass: Godot #36500826480 PASS; Windows #36500826416 PASS
 - environment pass: Godot #36501057566 PASS; Windows #36501057490 PASS
 - complete candidate set: Godot #36501323308 PASS; Windows #36501323360 PASS
+- baseline rendered evidence: Visual #36501775914 PASS; artifact #11005607995
+- remediation: Godot #36502420186 PASS; Windows #36502420202 PASS; Visual #36502420148 PASS; artifact #11005544111
 
-Current state: **MACHINE-INTEGRATED CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+Current state: **RENDERED VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
 ## Visual objective
 
@@ -110,7 +112,7 @@ The current bordered HUD is a candidate implementation of this direction, not ac
 
 ## Rendering strategy
 
-Current first pass uses authored SVG field/environment/prop candidates routed through the asset manifest. This is a rapid-production candidate format.
+Current presentation uses authored SVG field/environment/prop candidates plus a full-field authored terrain/path layer routed through the asset manifest. The first rendered review identified spatial fragmentation, small entities, weak grounding, HUD dominance, and a duplicate tower path; the first remediation addressed each of those mechanically and produced materially stronger rendered frames.
 
 Human review must determine whether this format produces the desired pixel-informed/JRPG field look at 960x540.
 
@@ -141,7 +143,7 @@ CI does **not** establish:
 - spatial comprehension
 - style cohesion
 
-Those require visible-window human review.
+Those require visible-window human review. Deterministic screenshots are now available as supporting implementation evidence but remain non-interactive.
 
 ## Current dependency
 

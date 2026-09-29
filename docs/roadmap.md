@@ -29,7 +29,7 @@
 - establish human interactive acceptance
 
 ## M3 — First coherent visual identity
-**Status:** FIRST AUTHORED CANDIDATE PASS IMPLEMENTED / HUMAN VISUAL ACCEPTANCE PENDING
+**Status:** RENDERED REMEDIATION V2 IMPLEMENTED / HUMAN VISUAL ACCEPTANCE PENDING
 
 Completed mechanically:
 - asset-ingestion contract
@@ -47,8 +47,10 @@ Completed mechanically:
 - tower candidate
 - HUD frame hierarchy
 - interaction prompt treatment
-- 16/16 current visual manifest slots populated
-- Godot/Windows CI green
+- 17/17 current visual manifest slots populated, including cohesive world base
+- rendered visual-evidence capture — COMPLETE
+- first evidence-driven remediation — COMPLETE
+- Godot/Windows/visual-evidence CI green
 
 Still required:
 - visible-window review
@@ -56,7 +58,9 @@ Still required:
 - visual hierarchy assessment
 - cozy/JRPG identity assessment
 - style cohesion assessment
-- defect-driven revisions
+- directional field-animation pass
+- atmospheric motion/lighting pass
+- further defect-driven revisions from human review
 - first music/ambient pass
 
 ## M4 — External playtest

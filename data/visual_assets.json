@@ -2,9 +2,9 @@
   "schema_version": 1,
   "pixel_scale": 1,
   "slots": {
-    "player": {"path": "", "size": [32, 32]},
-    "mira": {"path": "", "size": [32, 32]},
-    "sora": {"path": "", "size": [32, 32]},
+    "player": {"path": "res://assets/art/characters/nick_field_v1.svg", "size": [32, 32]},
+    "mira": {"path": "res://assets/art/characters/mira_field_v1.svg", "size": [32, 32]},
+    "sora": {"path": "res://assets/art/characters/sora_field_v1.svg", "size": [32, 32]},
     "wire": {"path": "", "size": [20, 20]},
     "solar": {"path": "", "size": [20, 20]},
     "pipe": {"path": "", "size": [20, 20]},

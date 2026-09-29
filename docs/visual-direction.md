@@ -47,8 +47,9 @@ Technical evidence:
 - field-motion / atmosphere v1: Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS; Windows artifact #11009097725; visual artifact #11009152621
 - lighting / environmental-depth v2: Godot #36511622050 PASS; Windows #36511622117 PASS; Visual #36511622061 PASS; Windows artifact #11009134048; visual artifact #11009124029
 - environment material-detail v3: Godot #36512026477 PASS; Windows #36512026476 PASS; Visual #36512026501 PASS; Windows artifact #11009801104; visual artifact #11009114744
+- JRPG/cartoon convergence v1 candidate: branch `art/jrpg-cartoon-convergence-v1`; CI evidence pending
 
-Current state: **RENDERED + MOTION + LIGHTING/DEPTH + ENVIRONMENT DETAIL V3 CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+Current state: **JRPG/CARTOON CONVERGENCE V1 CANDIDATE IN REVIEW / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
 ## Visual objective
 
@@ -123,7 +124,9 @@ Lighting / environmental-depth v2 adds shallow localized light-temperature cues,
 
 Environment material-detail v3 enriches the same authored SVG set with restrained terrain texture, workshop tool/material cues, village-green vegetation accents, lab instrument/archive detail, creek stone/water texture, and stronger damaged-versus-restored garden language. It remains a visual-only refinement of the same five-space slice.
 
-Human review must determine whether this format and motion layer produce the desired pixel-informed/JRPG field look at 960x540.
+JRPG/cartoon convergence v1 responds to human feedback that the build looked nice but did not yet read strongly as JRPG/cartoon style. It pushes character sprites toward larger heads, stronger silhouettes, more readable identity anchors, chunkier gloves/boots, clearer workshop/ecology motifs, and brighter cartoon contrast. It also pushes the field art toward hand-authored JRPG map language through chunkier trees, path chips, tile-like grass/stone/flower clusters, bolder workshop/lab silhouettes, clearer creek banks, and stronger damaged-versus-restored garden contrast. This is an art-style convergence candidate, not a final acceptance claim.
+
+Human review must determine whether this format, motion layer, and convergence pass produce the desired pixel-informed/JRPG field look at 960x540.
 
 ## Art acceptance criteria
 
@@ -138,6 +141,7 @@ The first coherent visual pass succeeds when:
 - UI does not obscure navigation
 - assets share one coherent shape/material/pixel language
 - the result remains readable at 960x540
+- human review agrees the field reads closer to cozy JRPG/cartoon than to a nice abstract prototype map
 
 ## Evidence boundary
 

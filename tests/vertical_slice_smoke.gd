@@ -24,6 +24,7 @@ func _run() -> void:
 	_check(world.hud.hint_panel != null, "HUD must expose a dedicated interaction prompt panel.")
 	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
 	_check(world.world_renderer.MOTION_PROFILE_VERSION == 1, "Field motion profile version must be 1.")
+	_check(world.world_renderer.PRESENTATION_PROFILE_VERSION == 2, "Presentation profile version must be 2.")
 	_check(world.world_renderer.motion_enabled == true, "Field motion must default to enabled.")
 	_check(int(world.world_renderer.asset_manifest.get("schema_version", 0)) == 1, "Visual asset manifest schema version must be 1.")
 	_check(world.world_renderer.asset_textures.size() == 17, "Visual remediation pass must load all seventeen visual slots.")

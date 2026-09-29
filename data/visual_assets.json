@@ -12,11 +12,11 @@
     "lab": {"path": "", "size": [40, 40]},
     "pump": {"path": "", "size": [40, 40]},
     "tower": {"path": "", "size": [48, 72]},
-    "zone_workshop": {"path": "", "rect": [38, 108, 250, 142]},
-    "zone_green": {"path": "", "rect": [320, 92, 255, 116]},
-    "zone_lab": {"path": "", "rect": [640, 104, 270, 130]},
-    "zone_creek": {"path": "", "rect": [70, 360, 590, 64]},
-    "garden_before": {"path": "", "rect": [698, 250, 222, 192]},
-    "garden_after": {"path": "", "rect": [698, 250, 222, 192]}
+    "zone_workshop": {"path": "res://assets/art/environment/workshop_yard_v1.svg", "rect": [38, 108, 250, 142]},
+    "zone_green": {"path": "res://assets/art/environment/village_green_v1.svg", "rect": [320, 92, 255, 116]},
+    "zone_lab": {"path": "res://assets/art/environment/grandfathers_lab_v1.svg", "rect": [640, 104, 270, 130]},
+    "zone_creek": {"path": "res://assets/art/environment/creek_salvage_v1.svg", "rect": [70, 360, 590, 64]},
+    "garden_before": {"path": "res://assets/art/environment/garden_before_v1.svg", "rect": [698, 250, 222, 192]},
+    "garden_after": {"path": "res://assets/art/environment/garden_after_v1.svg", "rect": [698, 250, 222, 192]}
   }
 }

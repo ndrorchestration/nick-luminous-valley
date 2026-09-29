@@ -24,8 +24,8 @@ func _run() -> void:
 	_check(world.hud.hint_panel != null, "HUD must expose a dedicated interaction prompt panel.")
 	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
 	_check(int(world.world_renderer.asset_manifest.get("schema_version", 0)) == 1, "Visual asset manifest schema version must be 1.")
-	_check(world.world_renderer.asset_textures.size() == 16, "First authored pass must load all sixteen visual slots.")
-	for slot_id in ["player","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
+	_check(world.world_renderer.asset_textures.size() == 17, "Visual remediation pass must load all seventeen visual slots.")
+	for slot_id in ["world_base","player","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
 		_check(world.world_renderer.asset_textures.has(slot_id), "Authored visual slot must load: %s" % slot_id)
 	_check(world.points.size() == 9, "Content model must load nine interaction points.")
 	_check(world.stage == 0, "Initial quest stage must be 0.")

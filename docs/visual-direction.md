@@ -2,9 +2,48 @@
 
 ## Purpose
 
-Define the first coherent production-art direction for **Nick's Luminous Valley** after human acceptance of the current functional vertical slice.
+Define and evaluate the first coherent production-art direction for **Nick's Luminous Valley**.
 
-This document is an art-direction and acceptance contract. It does not claim the visual direction has been implemented.
+The first authored visual candidate set is now mechanically implemented. This document remains the visual acceptance contract; implementation presence does not imply visual acceptance.
+
+## Current implementation state
+
+The current visual manifest has **16/16 populated candidate slots**:
+
+Characters:
+- Nick
+- Mira
+- Sora
+
+Pickups:
+- copper wire
+- cracked solar cell
+- pipe fitting
+- resin
+
+Props/stations:
+- lab bench
+- garden pump
+- transmission tower
+
+Environment:
+- workshop yard
+- village green
+- grandfather's lab
+- creek / salvage path
+- garden before repair
+- garden after repair
+
+UI:
+- bordered information panels
+- dedicated interaction prompt treatment
+
+Technical evidence:
+- character pass: Godot #36500826480 PASS; Windows #36500826416 PASS
+- environment pass: Godot #36501057566 PASS; Windows #36501057490 PASS
+- complete candidate set: Godot #36501323308 PASS; Windows #36501323360 PASS
+
+Current state: **MACHINE-INTEGRATED CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
 ## Visual objective
 
@@ -22,136 +61,90 @@ The visual identity should combine:
 ## First playable environment
 
 The Broken Water Pump slice should visually distinguish five spaces without requiring labels:
-
 1. workshop yard
 2. village green
 3. grandfather's lab
 4. creek / salvage path
 5. village garden
 
-Each space should have a clear dominant function, silhouette, material language, and value hierarchy.
-
 ## Character readability
 
 ### Nick
-
-Nick must read as the player character at gameplay scale through silhouette, value contrast, and one or two identity anchors.
-
-Do not rely on fine facial detail for field readability.
+Must read immediately as the player character at gameplay scale.
 
 ### Mira
-
-Mechanic identity should be legible before dialogue through workshop-associated costume/tool language and posture.
+Mechanic identity should be legible before dialogue.
 
 ### Sora
-
-Ecologist identity should be legible through plant/ecology-associated visual language without becoming a stereotype or costume gag.
+Ecologist identity should be legible before dialogue.
 
 ## Environment language
 
 ### Workshop yard
-- salvaged mechanisms
-- repair benches
-- useful clutter rather than random clutter
-- practical solar / mechanical components
-- warmer industrial materials
+Practical repair space with useful mechanical/solar clutter.
 
 ### Grandfather's lab
-- older scientific equipment integrated with luminous speculative technology
-- evidence of personal history
-- clear experiment station
-- mystery without horror framing
+Older scientific equipment blended with luminous speculative technology and personal history.
 
 ### Creek / salvage path
-- natural transition zone
-- recoverable materials embedded plausibly in the environment
-- movement path remains visually obvious
+Natural transition zone with clear navigation and plausible salvage context.
 
 ### Village garden
-
-Before repair:
-- muted / drier
-- interrupted water path
-- visible stress without looking dead
-
-After repair:
-- moving / brighter water
-- stronger plant posture and color
-- restrained particles / reflections
-- unmistakable transformation
+Before repair: visibly stressed, muted, interrupted water.
+After repair: visibly recovered, brighter, stronger plants, restored water.
 
 ### Transmission tower
-- visible before the ending
-- visually distinct but not fully explained
-- completion signal should produce a memorable light/sound cue
+Distinct, mysterious, memorable enough to serve as the ending hook.
 
 ## UI direction
 
-The UI should feel hand-built, readable, and lightly technological.
-
 Requirements:
-- objective is legible at a glance
-- nearby interaction prompt has stronger local priority than passive information
-- repair-part count stays compact
-- village trust reads as a consequence, not merely a score
-- dialogue/message area is separated from movement space
+- objective legible at a glance
+- nearby interaction prompt has local priority
+- repair-part count compact
+- village trust reads as consequence
+- dialogue/message area separated from movement space
 - avoid developer-overlay aesthetics
+
+The current bordered HUD is a candidate implementation of this direction, not accepted final UI.
 
 ## Rendering strategy
 
-Preferred first route:
-- authored 2D sprites and tiles
-- modern pixel-art or pixel-informed rendering
-- consistent internal pixel scale
-- nearest-neighbor presentation where appropriate
-- limited animation set with high pose clarity
-- selective lighting and particles above the pixel layer
+Current first pass uses authored SVG field/environment/prop candidates routed through the asset manifest. This is a rapid-production candidate format.
 
-Do not mix incompatible pixel densities or high-resolution painted field assets without an explicit composition rule.
-
-## Minimum first asset package
-
-- Nick field sprite: idle + 4-direction walk
-- Mira field sprite
-- Sora field sprite
-- interaction marker / prompt treatment
-- workshop tiles / props
-- lab tiles / props
-- creek / path tiles
-- garden before / after tiles
-- pump before / after
-- transmission tower
-- four component pickups
-- basic UI frame / icon language
-
-Portraits are useful but not required for the first environmental conversion pass.
+Human review must determine whether this format produces the desired pixel-informed/JRPG field look at 960x540.
 
 ## Art acceptance criteria
 
 The first coherent visual pass succeeds when:
 - a screenshot no longer reads as a debug/procedural prototype
-- all five spaces are distinguishable without text labels
-- Nick is immediately identifiable as the controllable character
+- all five spaces are distinguishable without labels
+- Nick is immediately identifiable as controllable
 - Mira and Sora are visually distinct
-- interactable objects have discoverable affordances
-- the garden transformation is obvious within one second
-- the tower is memorable enough to function as an ending hook
+- interactables have discoverable affordances
+- garden transformation is obvious within one second
+- tower functions as a memorable ending hook
 - UI does not obscure navigation
-- assets share one coherent pixel / shape / material language
-- the result remains readable at the current 960x540 viewport
+- assets share one coherent shape/material/pixel language
+- the result remains readable at 960x540
 
 ## Evidence boundary
 
-Art approval requires visible-window human review.
+CI proves loading, runtime compatibility, regression safety, and packaging.
 
-CI can prove files load and scenes run, but it cannot establish:
+CI does **not** establish:
 - visual appeal
 - visual hierarchy
 - JRPG readability
+- cozy identity
 - emotional tone
 - spatial comprehension
 - style cohesion
 
-## Dependency
+Those require visible-window human review.
 
-Do not promote this brief to implemented art state until issue #7 human interactive acceptance is completed or produces a bounded defect list to address first.
+## Current dependency
+
+Issue #7 — Human interactive acceptance — is the primary gate.
+
+Issues #13, #14, and #15 are implemented candidates but remain open until visible-window review confirms their visual acceptance criteria.

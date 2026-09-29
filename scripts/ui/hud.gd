@@ -9,6 +9,7 @@ var trust_label: Label
 var message_label: Label
 var hint_label: Label
 var hint_panel: Panel
+var hint_accent: ColorRect
 var objective_tag_label: Label
 var controls_title_label: Label
 var message_tag_label: Label
@@ -23,16 +24,16 @@ func build_ui() -> void:
 	_add_accent(Vector2(25, 12), Vector2(34, 2), Color("78d5c0"))
 	_add_accent(Vector2(603, 11), Vector2(3, 46), Color("78d5c0"))
 	_add_accent(Vector2(18, 490), Vector2(3, 35), Color("d7bd68"))
-	_add_accent(Vector2(653, 454), Vector2(3, 18), Color("82d9c1"))
+	hint_accent = _add_accent(Vector2(653, 454), Vector2(3, 18), Color("82d9c1"))
 
 	title_label = _make_label(Vector2(28, 10), Vector2(540, 21), 17, Color("fff0b7"))
 	title_label.add_theme_color_override("font_shadow_color", Color(0.0, 0.0, 0.0, 0.72))
 	title_label.add_theme_constant_override("shadow_offset_x", 1)
 	title_label.add_theme_constant_override("shadow_offset_y", 1)
 
-	objective_tag_label = _make_label(Vector2(29, 33), Vector2(78, 17), 10, Color("d7bd68"))
+	objective_tag_label = _make_label(Vector2(29, 33), Vector2(68, 17), 10, Color("d7bd68"))
 	objective_tag_label.text = "OBJECTIVE"
-	objective_label = _make_label(Vector2(101, 31), Vector2(456, 20), 14, Color("e0f4eb"))
+	objective_label = _make_label(Vector2(96, 31), Vector2(466, 20), 13, Color("e0f4eb"))
 
 	inventory_label = _make_stat_chip(Vector2(29, 56), Vector2(176, 19), Color("f0d477"))
 	trust_label = _make_stat_chip(Vector2(211, 56), Vector2(168, 19), Color("9ee2b8"))
@@ -51,12 +52,13 @@ func build_ui() -> void:
 
 func refresh(title: String, objective: String, part_count: int, trust: int, message: String, hint: String) -> void:
 	title_label.text = title
-	objective_label.text = objective
+	objective_label.text = objective.trim_prefix("Objective:").strip_edges()
 	inventory_label.text = "PARTS  %d / 4" % part_count
 	trust_label.text = "TRUST  %d" % trust
 	message_label.text = message
 	hint_label.text = hint
 	hint_panel.visible = not hint.is_empty()
+	hint_accent.visible = hint_panel.visible
 
 func _add_panel(pos: Vector2, dimensions: Vector2, color: Color, border_color: Color, shadow_color: Color) -> Panel:
 	var panel := Panel.new()
@@ -102,12 +104,13 @@ func _make_stat_chip(pos: Vector2, dimensions: Vector2, font_color: Color) -> La
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	return label
 
-func _add_accent(pos: Vector2, dimensions: Vector2, color: Color) -> void:
+func _add_accent(pos: Vector2, dimensions: Vector2, color: Color) -> ColorRect:
 	var accent := ColorRect.new()
 	accent.position = pos
 	accent.size = dimensions
 	accent.color = color
 	add_child(accent)
+	return accent
 
 func _make_label(pos: Vector2, dimensions: Vector2, font_size: int, font_color: Color) -> Label:
 	var label := Label.new()

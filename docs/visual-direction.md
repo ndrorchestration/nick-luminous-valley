@@ -47,9 +47,10 @@ Technical evidence:
 - field-motion / atmosphere v1: Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS; Windows artifact #11009097725; visual artifact #11009152621
 - lighting / environmental-depth v2: Godot #36511622050 PASS; Windows #36511622117 PASS; Visual #36511622061 PASS; Windows artifact #11009134048; visual artifact #11009124029
 - environment material-detail v3: Godot #36512026477 PASS; Windows #36512026476 PASS; Visual #36512026501 PASS; Windows artifact #11009801104; visual artifact #11009114744
-- JRPG/cartoon convergence v1 candidate: branch `art/jrpg-cartoon-convergence-v1`; CI evidence pending
+- JRPG/cartoon convergence v1: Godot #36513633818 PASS; Windows #36513633735 PASS; Visual #36513633729 PASS; Windows artifact #11009512738; visual artifact #11009612578
+- JRPG HUD convergence v1: Godot #36517277505 PASS; Windows #36517277506 PASS; Visual #36517277356 PASS; Windows artifact #11010864941; visual artifact #11011272474
 
-Current state: **JRPG/CARTOON CONVERGENCE V1 CANDIDATE IN REVIEW / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+Current state: **JRPG/CARTOON + HUD CONVERGENCE CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
 ## Visual objective
 
@@ -112,7 +113,7 @@ Requirements:
 - dialogue/message area separated from movement space
 - avoid developer-overlay aesthetics
 
-The current bordered HUD is a candidate implementation of this direction, not accepted final UI.
+The current HUD profile v2 uses an authored objective tag, compact PARTS/TRUST stat chips, labeled FIELD CONTROLS and FIELD LOG regions, ornamental gold/teal accents, panel shadows, and a centered local interaction prompt. It is a machine-verified JRPG presentation candidate, not accepted final UI.
 
 ## Rendering strategy
 
@@ -125,6 +126,8 @@ Lighting / environmental-depth v2 adds shallow localized light-temperature cues,
 Environment material-detail v3 enriches the same authored SVG set with restrained terrain texture, workshop tool/material cues, village-green vegetation accents, lab instrument/archive detail, creek stone/water texture, and stronger damaged-versus-restored garden language. It remains a visual-only refinement of the same five-space slice.
 
 JRPG/cartoon convergence v1 responds to human feedback that the build looked nice but did not yet read strongly as JRPG/cartoon style. It pushes character sprites toward larger heads, stronger silhouettes, more readable identity anchors, chunkier gloves/boots, clearer workshop/ecology motifs, and brighter cartoon contrast. It also pushes the field art toward hand-authored JRPG map language through chunkier trees, path chips, tile-like grass/stone/flower clusters, bolder workshop/lab silhouettes, clearer creek banks, and stronger damaged-versus-restored garden contrast. This is an art-style convergence candidate, not a final acceptance claim.
+
+JRPG HUD convergence v1 addresses the remaining developer-overlay feel visible after the field-art convergence pass. It introduces an explicit information hierarchy and decorative frame language without changing world coordinates, quest semantics, interaction geometry, or content.
 
 Human review must determine whether this format, motion layer, and convergence pass produce the desired pixel-informed/JRPG field look at 960x540.
 

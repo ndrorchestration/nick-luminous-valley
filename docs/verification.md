@@ -217,19 +217,19 @@ State: **MACHINE-VERIFIED MOTION/ATMOSPHERE CANDIDATE / HUMAN VISUAL ACCEPTANCE 
 
 ## Lighting and environmental-depth v2
 
-Godot Smoke: **#36511353056 — PASS**  
-Windows Playtest Build: **#36511353032 — PASS**  
-Visual Evidence Capture: **#36511353070 — PASS**
+Godot Smoke: **#36511622050 — PASS**  
+Windows Playtest Build: **#36511622117 — PASS**  
+Visual Evidence Capture: **#36511622061 — PASS**
 
 Exact runtime/test head:
 
-`bfc5bec7bc1bd6b8f36ef7af00995251cafcc5a2`
+`5d911a030463f1d0d750696c9dd1438715469914`
 
 Artifacts:
-- Windows playtest ID: `11009315397`
-- Windows digest: `sha256:81e001ac19870bbb6ec9e1d48548e681e2137bfb63df8c6e4fffa6a5337fc92a`
-- rendered visual evidence ID: `11009600073`
-- visual-evidence digest: `sha256:7f0bd3adfb1226461e9706dd6e22829f41a3f4221f84a26d364774fe57117b36`
+- Windows playtest ID: `11009134048`
+- Windows digest: `sha256:fa3780a0b3425b0719486e0245e3f85dee726b18566eb75d93b2aaa1f148e7ec`
+- rendered visual evidence ID: `11009124029`
+- visual-evidence digest: `sha256:d1f70a480d6b78cf10f7316b48002a3dbe8b3e345e2b7c499ca39e942f44e0f8`
 
 Established:
 - presentation profile v2 loads under smoke acceptance

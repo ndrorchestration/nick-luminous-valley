@@ -46,8 +46,9 @@ Technical evidence:
 - remediation: Godot #36502420186 PASS; Windows #36502420202 PASS; Visual #36502420148 PASS; artifact #11005544111
 - field-motion / atmosphere v1: Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS; Windows artifact #11009097725; visual artifact #11009152621
 - lighting / environmental-depth v2: Godot #36511622050 PASS; Windows #36511622117 PASS; Visual #36511622061 PASS; Windows artifact #11009134048; visual artifact #11009124029
+- environment material-detail v3: Godot #36512026477 PASS; Windows #36512026476 PASS; Visual #36512026501 PASS; Windows artifact #11009801104; visual artifact #11009114744
 
-Current state: **RENDERED + MOTION + LIGHTING/DEPTH V2 VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+Current state: **RENDERED + MOTION + LIGHTING/DEPTH + ENVIRONMENT DETAIL V3 CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
 ## Visual objective
 
@@ -119,6 +120,8 @@ Current presentation uses authored SVG field/environment/prop candidates plus a 
 Field-motion / atmosphere v1 adds deterministic player-facing motion bias, subtle NPC breathing/bob motion, floating pickups, creek glints, ambient field motes, post-repair garden motes, and a tower signal sweep without changing quest semantics or the visual-manifest schema.
 
 Lighting / environmental-depth v2 adds shallow localized light-temperature cues, creek-bank depth lines, reeds, and boundary foliage. These are presentation-only additions: collision, quest semantics, authored asset slots, and interaction geometry remain unchanged.
+
+Environment material-detail v3 enriches the same authored SVG set with restrained terrain texture, workshop tool/material cues, village-green vegetation accents, lab instrument/archive detail, creek stone/water texture, and stronger damaged-versus-restored garden language. It remains a visual-only refinement of the same five-space slice.
 
 Human review must determine whether this format and motion layer produce the desired pixel-informed/JRPG field look at 960x540.
 

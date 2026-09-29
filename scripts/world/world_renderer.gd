@@ -3,6 +3,7 @@ extends Node2D
 const ASSET_MANIFEST_PATH := "res://data/visual_assets.json"
 const ASSET_CATALOG = preload("res://scripts/world/asset_catalog.gd")
 const MOTION_PROFILE_VERSION := 1
+const PRESENTATION_PROFILE_VERSION := 2
 
 var points: Array = []
 var inventory: Dictionary = {}
@@ -109,6 +110,41 @@ func _draw_zone(rect: Rect2, fill: Color, edge: Color, label: String, label_pos:
 func _draw_entity_shadow(pos: Vector2, radius: float) -> void:
 	draw_circle(pos + Vector2(0, 11), radius, Color(0, 0, 0, 0.24))
 
+func _draw_environment_depth() -> void:
+	# A deliberately shallow 2D lighting/dressing layer: enough to break up flat fields
+	# without changing collision, quest state, authored asset slots, or interaction geometry.
+	draw_rect(Rect2(0, 82, 960, 388), Color(0.96, 0.84, 0.56, 0.018), true)
+	draw_rect(Rect2(0, 82, 960, 18), Color(0.72, 0.92, 0.74, 0.035), true)
+	draw_rect(Rect2(0, 446, 960, 24), Color(0.0, 0.0, 0.0, 0.10), true)
+
+	# Localized light temperature gives each authored space a stronger material identity.
+	draw_circle(Vector2(172, 166), 54.0, Color(1.0, 0.72, 0.38, 0.026))
+	draw_circle(Vector2(450, 142), 68.0, Color(0.84, 0.94, 0.58, 0.035))
+	draw_circle(Vector2(782, 164), 52.0, Color(0.50, 0.90, 0.92, 0.030))
+	if world_changed:
+		draw_circle(Vector2(820, 342), 88.0, Color(0.68, 1.0, 0.58, 0.050))
+	else:
+		draw_circle(Vector2(820, 342), 82.0, Color(0.55, 0.45, 0.28, 0.022))
+
+	# Creek banks and small reeds create depth cues without adding collision.
+	draw_line(Vector2(70, 357), Vector2(660, 357), Color(0.58, 0.78, 0.60, 0.16), 2.0)
+	draw_line(Vector2(70, 426), Vector2(660, 426), Color(0.02, 0.08, 0.06, 0.36), 2.0)
+	var reed_xs: Array[float] = [86.0, 118.0, 642.0]
+	for reed_x in reed_xs:
+		draw_line(Vector2(reed_x, 371), Vector2(reed_x - 2.0, 359), Color(0.48, 0.68, 0.42, 0.42), 2.0)
+		draw_line(Vector2(reed_x + 4.0, 372), Vector2(reed_x + 7.0, 361), Color(0.56, 0.74, 0.46, 0.34), 1.0)
+
+	# Boundary foliage softens the rectangular authored zones and helps the field read as one place.
+	var shrubs: Array[Vector2] = [
+		Vector2(18, 122), Vector2(306, 111), Vector2(607, 119), Vector2(938, 139),
+		Vector2(30, 316), Vector2(675, 318), Vector2(675, 432), Vector2(941, 421),
+		Vector2(302, 449)
+	]
+	for shrub_pos in shrubs:
+		draw_circle(shrub_pos + Vector2(1.5, 3.0), 6.5, Color(0.0, 0.0, 0.0, 0.16))
+		draw_circle(shrub_pos, 5.6, Color(0.17, 0.32, 0.20, 0.92))
+		draw_circle(shrub_pos + Vector2(-2.0, -2.0), 2.2, Color(0.38, 0.55, 0.30, 0.65))
+
 func _draw_atmosphere() -> void:
 	if not motion_enabled:
 		return
@@ -170,6 +206,8 @@ func _draw() -> void:
 
 		var water_color := Color("6fc7dd") if world_changed else Color("315c68")
 		draw_line(Vector2(720, 286), Vector2(900, 286), water_color, 5.0 if world_changed else 2.0)
+
+	_draw_environment_depth()
 
 	_draw_atmosphere()
 

@@ -75,7 +75,9 @@ func _draw_zone_asset(slot_id: String, fallback_rect: Rect2) -> bool:
 func _draw_shadowed_zone(slot_id: String, rect: Rect2) -> bool:
 	if _slot_texture(slot_id) == null:
 		return false
-	draw_rect(rect.grow(5.0) + Vector2(0, 4), Color(0, 0, 0, 0.20), true)
+	var shadow_rect := rect.grow(5.0)
+	shadow_rect.position += Vector2(0, 4)
+	draw_rect(shadow_rect, Color(0, 0, 0, 0.20), true)
 	return _draw_zone_asset(slot_id, rect)
 
 func _draw_zone(rect: Rect2, fill: Color, edge: Color, label: String, label_pos: Vector2) -> void:

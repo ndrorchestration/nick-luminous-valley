@@ -4,20 +4,23 @@ GitHub Actions produces a Windows playtest artifact from the current project.
 
 ## Current human-play candidate
 
-Current remediation head:
+Current PR #21 motion/atmosphere/lighting-depth candidate runtime/test head:
 
-`ce9c193b6b60018bdebc5e89abc0ab00b89e9702`
+`5d911a030463f1d0d750696c9dd1438715469914`
+
+PR #21 merged at:
+
+`8873dd4d18c380ed760387792052c6a987b3350d`
 
 Latest verified Windows packaging run:
 
-`#36502420202 — PASS`
+`#36511622117 — PASS`
 
 Latest artifact:
 - name: `Nicks-Luminous-Valley-Windows-Playtest`
-- artifact ID: `11006042768`
+- artifact ID: `11009134048`
 - expected executable: `NicksLuminousValley.exe`
-- size: `38,953,117 bytes`
-- digest: `sha256:93657a502f18c00dd205af5259ae5438eb5fb29618b0eb81c2889ecd96225656`
+- digest: `sha256:fa3780a0b3425b0719486e0245e3f85dee726b18566eb75d93b2aaa1f148e7ec`
 - GitHub expiry: 2026-10-13 for this specific artifact
 
 ## Durable Drive mirror
@@ -32,11 +35,11 @@ https://drive.google.com/drive/folders/1A2tHqaNKAutBIDDhtA464nuNm3LemaHG
 
 Latest Windows ZIP:
 
-https://drive.google.com/file/d/1dpmOsAWovXFINaFf74_6GQouKQfCGXMN/view?usp=drivesdk
+https://drive.google.com/file/d/1TKb5HOavTVsXOHjQPpkITt_iUvM93Ll6/view?usp=drivesdk
 
 Latest rendered visual-evidence ZIP:
 
-https://drive.google.com/file/d/1mG1Ymf4g0zGHH2aDIzWlhfTcClHZCdT9/view?usp=drivesdk
+https://drive.google.com/file/d/1nVjMbV6ptMUCZ6NHQcLNuNntdELJC6lI/view?usp=drivesdk
 
 Drive is a durable handoff mirror. GitHub remains the authority for exact source, workflow run, artifact identity, and implementation state.
 
@@ -44,15 +47,15 @@ Drive is a durable handoff mirror. GitHub remains the authority for exact source
 
 Latest rendered visual-evidence run:
 
-`#36502420148 — PASS`
+`#36511622061 — PASS`
 
 Artifact ID:
 
-`11005544111`
+`11009124029`
 
 Digest:
 
-`sha256:9188cad96b3c567907c3d020596ccba505e1da0da001dcc392a91b01f3773eff`
+`sha256:d1f70a480d6b78cf10f7316b48002a3dbe8b3e345e2b7c499ca39e942f44e0f8`
 
 Use the rendered evidence for comparison and review, but do not substitute screenshots for interactive play.
 
@@ -80,7 +83,12 @@ Initial digest:
 
 `sha256:20dedfc3f8b60c61e044bb957093fb93e21433363443500e30507e487fb527da`
 
-This remains provenance, not the current preferred human-play package.
+Prior remediation candidate:
+- head: `ce9c193b6b60018bdebc5e89abc0ab00b89e9702`
+- Windows artifact: `11006042768`
+- visual artifact: `11005544111`
+
+Historical entries remain provenance, not the current preferred human-play package.
 
 ## Human acceptance
 

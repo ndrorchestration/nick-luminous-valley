@@ -23,10 +23,21 @@ func _run() -> void:
 	_check(world.hud != null, "HUD must be composed as a dedicated runtime component.")
 	_check(world.hud.hint_panel != null, "HUD must expose a dedicated interaction prompt panel.")
 	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
+	_check(world.world_renderer.MOTION_PROFILE_VERSION == 1, "Field motion profile version must be 1.")
+	_check(world.world_renderer.motion_enabled == true, "Field motion must default to enabled.")
 	_check(int(world.world_renderer.asset_manifest.get("schema_version", 0)) == 1, "Visual asset manifest schema version must be 1.")
 	_check(world.world_renderer.asset_textures.size() == 17, "Visual remediation pass must load all seventeen visual slots.")
 	for slot_id in ["world_base","player","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
 		_check(world.world_renderer.asset_textures.has(slot_id), "Authored visual slot must load: %s" % slot_id)
+
+	var player_motion_a: Vector2 = world.world_renderer._motion_offset("player", Vector2.RIGHT, 0.0)
+	var player_motion_b: Vector2 = world.world_renderer._motion_offset("player", Vector2.RIGHT, 0.25)
+	_check(not player_motion_a.is_equal_approx(player_motion_b), "Player field motion must vary over time.")
+	_check(player_motion_a.x > 0.0, "Player field motion must preserve facing-direction bias.")
+	var pickup_motion_a: Vector2 = world.world_renderer._motion_offset("wire", Vector2.ZERO, 0.0)
+	var pickup_motion_b: Vector2 = world.world_renderer._motion_offset("wire", Vector2.ZERO, 0.5)
+	_check(not pickup_motion_a.is_equal_approx(pickup_motion_b), "Pickup field motion must vary over time.")
+
 	_check(world.points.size() == 9, "Content model must load nine interaction points.")
 	_check(world.stage == 0, "Initial quest stage must be 0.")
 	_check(world.inventory.size() == 0, "Initial inventory must be empty.")

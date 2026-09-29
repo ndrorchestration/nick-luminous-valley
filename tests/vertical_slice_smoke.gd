@@ -22,6 +22,10 @@ func _run() -> void:
 
 	_check(world.hud != null, "HUD must be composed as a dedicated runtime component.")
 	_check(world.hud.hint_panel != null, "HUD must expose a dedicated interaction prompt panel.")
+	_check(world.hud.HUD_PROFILE_VERSION == 2, "JRPG HUD profile version must be 2.")
+	_check(world.hud.objective_tag_label != null, "HUD must expose an objective tag.")
+	_check(world.hud.controls_title_label != null, "HUD must expose a field-controls title.")
+	_check(world.hud.message_tag_label != null, "HUD must expose a field-log tag.")
 	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
 	_check(world.world_renderer.MOTION_PROFILE_VERSION == 1, "Field motion profile version must be 1.")
 	_check(world.world_renderer.PRESENTATION_PROFILE_VERSION == 2, "Presentation profile version must be 2.")

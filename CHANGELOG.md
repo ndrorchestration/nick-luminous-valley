@@ -1,5 +1,41 @@
 # Changelog
 
+## Evidence-driven visual remediation — merged 2026-09-28
+
+Main commit: `e1148324764d056556c67b04e2dcf134254d52ca`
+
+### Changed
+- added cohesive full-field village base terrain/path layer
+- connected previously isolated visual zones
+- increased character, pickup, station, and tower draw scale
+- added grounding shadows
+- removed duplicate tower rendering
+- strengthened tower signal effect
+- compacted HUD proportions
+- preserved garden before/after contrast
+
+### Verified
+- Godot Smoke #36502420186 — PASS
+- Windows Playtest Build #36502420202 — PASS
+- Visual Evidence Capture #36502420148 — PASS
+- visual artifact #11005544111
+
+## Rendered visual evidence infrastructure — merged 2026-09-28
+
+Main commit: `0de3f835c7c07ec0ff991e918b3a60dfc92635af`
+
+### Added
+- deterministic rendered checkpoint capture
+- four visual evidence frames
+- artifact verification/upload
+- rendered-review documentation path
+
+### Verified
+- Godot Smoke #36501775952 — PASS
+- Windows Playtest Build #36501775882 — PASS
+- Visual Evidence Capture #36501775914 — PASS
+
+
 ## Complete first authored visual candidate set — merged 2026-09-28
 
 Main commit: `8deace2bc28019c64de5ba4f4af1fa7ee07d2a9d`

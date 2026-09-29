@@ -215,6 +215,34 @@ Established:
 
 State: **MACHINE-VERIFIED MOTION/ATMOSPHERE CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
+## Lighting and environmental-depth v2
+
+Godot Smoke: **#36511353056 — PASS**  
+Windows Playtest Build: **#36511353032 — PASS**  
+Visual Evidence Capture: **#36511353070 — PASS**
+
+Exact runtime/test head:
+
+`bfc5bec7bc1bd6b8f36ef7af00995251cafcc5a2`
+
+Artifacts:
+- Windows playtest ID: `11009315397`
+- Windows digest: `sha256:81e001ac19870bbb6ec9e1d48548e681e2137bfb63df8c6e4fffa6a5337fc92a`
+- rendered visual evidence ID: `11009600073`
+- visual-evidence digest: `sha256:7f0bd3adfb1226461e9706dd6e22829f41a3f4221f84a26d364774fe57117b36`
+
+Established:
+- presentation profile v2 loads under smoke acceptance
+- localized light-temperature cues render
+- creek bank/reed depth cues render
+- boundary foliage renders
+- quest semantics remain green
+- save/load remains green
+- Windows packaging remains green
+- rendered-evidence capture remains green
+
+State: **MACHINE-VERIFIED LIGHTING/DEPTH CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
 ## Not established
 
 Automated CI does **not** establish:

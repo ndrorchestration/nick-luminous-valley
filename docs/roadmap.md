@@ -51,6 +51,7 @@ Completed mechanically:
 - rendered visual-evidence capture — COMPLETE
 - first evidence-driven remediation — COMPLETE
 - Godot/Windows/visual-evidence CI green
+- field-motion / atmosphere v1 candidate — Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS
 
 Still required:
 - visible-window review
@@ -58,8 +59,9 @@ Still required:
 - visual hierarchy assessment
 - cozy/JRPG identity assessment
 - style cohesion assessment
-- directional field-animation pass
-- atmospheric motion/lighting pass
+- directional field-animation pass — **MACHINE-VERIFIED CANDIDATE COMPLETE**
+- atmospheric motion pass — **MACHINE-VERIFIED CANDIDATE COMPLETE**
+- lighting refinement pass
 - further defect-driven revisions from human review
 - first music/ambient pass
 

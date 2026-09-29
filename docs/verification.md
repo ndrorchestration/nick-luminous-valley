@@ -272,6 +272,61 @@ Rendered comparison supports increased material/detail density without an observ
 
 State: **MACHINE-VERIFIED ENVIRONMENT-DETAIL CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
+## JRPG/cartoon convergence v1
+
+Godot Smoke: **#36513633818 — PASS**  
+Windows Playtest Build: **#36513633735 — PASS**  
+Visual Evidence Capture: **#36513633729 — PASS**
+
+Exact candidate head:
+
+`4a48c6ae8c060d816863aed1f5079a914d14c93c`
+
+Merged at:
+
+`18af1c7aca1e0fb9eb2111207725367347140749`
+
+Artifacts:
+- Windows playtest ID: `11009512738`
+- Windows digest: `sha256:4fb00dd5a0f8830f3a6636db7d0898a40ba7ed52be41c8b40fd84cc58411a093`
+- rendered visual evidence ID: `11009612578`
+- visual-evidence digest: `sha256:5f0d22ed629088536a96795696ca973de2d54dca989ca3cfb4df1eaf1c56407c`
+
+Established:
+- Nick, Mira, and Sora use the JRPG/cartoon convergence candidate assets
+- field/background SVGs contain the convergence marker required by smoke acceptance
+- chunkier field-map language and stronger identity accents render in deterministic checkpoints
+- quest semantics, save/load, Windows packaging, and evidence capture remain green
+
+State: **MACHINE-VERIFIED JRPG/CARTOON CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
+## JRPG HUD convergence v1
+
+Godot Smoke: **#36517277505 — PASS**  
+Windows Playtest Build: **#36517277506 — PASS**  
+Visual Evidence Capture: **#36517277356 — PASS**
+
+Exact implementation/test head:
+
+`95dddae183413fef785effd00be74562f65a873f`
+
+Artifacts:
+- Windows playtest ID: `11010864941`
+- Windows digest: `sha256:af0c908b87c1895aa51c063dba69722d3cfd4ef343e10d3284888ee22a5da429`
+- rendered visual evidence ID: `11011272474`
+- visual-evidence digest: `sha256:fb5269b71c8fa03bd7cf1798772152392487cfc0b7fa9b49dc1ba22f2d636654`
+
+Established:
+- HUD profile version 2 loads under smoke acceptance
+- objective tag, stat chips, field-controls label, field-log label, and local prompt treatment instantiate
+- hidden interaction prompts do not leave a stray accent artifact
+- long objective text no longer collides with the PARTS/TRUST row in deterministic capture
+- quest semantics, save/load, Windows packaging, and rendered capture remain green
+
+Rendered comparison supports a more authored JRPG information hierarchy with less developer-overlay character. This is implementation evidence, not human UI acceptance.
+
+State: **MACHINE-VERIFIED JRPG HUD CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
 ## Not established
 
 Automated CI does **not** establish:

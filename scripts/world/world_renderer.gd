@@ -117,14 +117,20 @@ func _draw_environment_depth() -> void:
 	draw_rect(Rect2(0, 82, 960, 18), Color(0.72, 0.92, 0.74, 0.035), true)
 	draw_rect(Rect2(0, 446, 960, 24), Color(0.0, 0.0, 0.0, 0.10), true)
 
-	# Localized light temperature gives each authored space a stronger material identity.
-	draw_circle(Vector2(172, 166), 54.0, Color(1.0, 0.72, 0.38, 0.026))
-	draw_circle(Vector2(450, 142), 68.0, Color(0.84, 0.94, 0.58, 0.035))
-	draw_circle(Vector2(782, 164), 52.0, Color(0.50, 0.90, 0.92, 0.030))
+	# Localized dapple patches give each authored space a material identity without
+	# reading as a single geometric light disk in the fixed 960x540 composition.
+	for light_pos in [Vector2(146, 148), Vector2(180, 170), Vector2(205, 154)]:
+		draw_circle(light_pos, 30.0, Color(1.0, 0.72, 0.38, 0.012))
+	for light_pos in [Vector2(416, 128), Vector2(454, 154), Vector2(492, 130)]:
+		draw_circle(light_pos, 34.0, Color(0.84, 0.94, 0.58, 0.014))
+	for light_pos in [Vector2(754, 146), Vector2(787, 170), Vector2(817, 150)]:
+		draw_circle(light_pos, 28.0, Color(0.50, 0.90, 0.92, 0.013))
 	if world_changed:
-		draw_circle(Vector2(820, 342), 88.0, Color(0.68, 1.0, 0.58, 0.050))
+		for light_pos in [Vector2(786, 322), Vector2(824, 354), Vector2(862, 330)]:
+			draw_circle(light_pos, 38.0, Color(0.68, 1.0, 0.58, 0.018))
 	else:
-		draw_circle(Vector2(820, 342), 82.0, Color(0.55, 0.45, 0.28, 0.022))
+		for light_pos in [Vector2(792, 326), Vector2(842, 350)]:
+			draw_circle(light_pos, 34.0, Color(0.55, 0.45, 0.28, 0.010))
 
 	# Creek banks and small reeds create depth cues without adding collision.
 	draw_line(Vector2(70, 357), Vector2(660, 357), Color(0.58, 0.78, 0.60, 0.16), 2.0)

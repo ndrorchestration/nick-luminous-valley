@@ -13,35 +13,50 @@
 ## M1 — Vertical Slice v2
 **Status:** IMPLEMENTED / CI PASS / HUMAN ACCEPTANCE PENDING
 
-- data-driven objective and interaction content
+- data-driven content
 - named world zones
 - interaction prompts
-- stronger UI hierarchy
-- visible garden recovery
 - village-trust feedback
-- stronger tower ending
+- tower ending
 - save schema v2
-- expanded CI
 
 ## M2 — Human usability convergence
-**Status:** NEXT
+**Status:** CURRENT GATE
 
-- play the slice in a visible Godot window
+- run the current Windows build in a visible window
 - record confusion and friction
 - repair movement, prompt, spacing, readability, and pacing issues
-- establish human acceptance
+- establish human interactive acceptance
 
 ## M3 — First coherent visual identity
-**Status:** PIPELINE READY / HUMAN ACCEPTANCE GATED
+**Status:** FIRST AUTHORED CANDIDATE PASS IMPLEMENTED / HUMAN VISUAL ACCEPTANCE PENDING
 
-- asset-ingestion contract — COMPLETE
-- protagonist sprite direction
-- Mira and Sora silhouettes/portraits
-- tiles/ground treatment
-- lab and workshop identity
-- garden before/after art
-- interaction VFX
-- UI frame language
+Completed mechanically:
+- asset-ingestion contract
+- Nick field sprite candidate
+- Mira field sprite candidate
+- Sora field sprite candidate
+- workshop yard candidate
+- village green candidate
+- grandfather's lab candidate
+- creek / salvage candidate
+- garden before/after candidates
+- four pickup candidates
+- lab bench candidate
+- pump candidate
+- tower candidate
+- HUD frame hierarchy
+- interaction prompt treatment
+- 16/16 current visual manifest slots populated
+- Godot/Windows CI green
+
+Still required:
+- visible-window review
+- field readability assessment
+- visual hierarchy assessment
+- cozy/JRPG identity assessment
+- style cohesion assessment
+- defect-driven revisions
 - first music/ambient pass
 
 ## M4 — External playtest

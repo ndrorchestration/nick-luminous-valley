@@ -16,41 +16,29 @@ Established for the bootstrap:
 - tower completion
 - save/load restoration
 
-Foundation merged to `main` at commit `0bd1ff387415f4e599e8166615c12d82d69cf218`.
+Foundation merged to `main` at `0bd1ff387415f4e599e8166615c12d82d69cf218`.
 
 ## Vertical-slice v2 evidence
-
-Environment: Godot 4.7.2 on GitHub Actions
 
 Implementation run: **#36494569694 — PASS**  
 Final branch-head run: **#36494912875 — PASS**
 
-Established for v2:
-- project import
-- main-scene launch
+Established:
 - JSON content loading
-- nine interaction points available
-- Mira stage transition
-- Sora stage transition
-- three-part incomplete state
+- nine interaction points
+- Mira/Sora transitions
 - missing-part lab rejection
-- fourth-part completion
-- lab repair transition
-- pump installation
-- persistent world-state change
+- four-part completion
+- pump/world-state transition
 - village-trust increase
 - tower completion
-- save/load restoration including trust and position
+- save/load restoration
 
-Vertical-slice v2 merged to `main` at commit:
-
-`e2529d610e029df4c4f8e061bb7029bb4b83a6d5`
+Merged to `main` at `e2529d610e029df4c4f8e061bb7029bb4b83a6d5`.
 
 ## Windows packaging evidence
 
-Environment: Godot 4.7.2 + export templates on GitHub Actions  
-Run: **#36496236186**  
-Result: **PASS**
+Run: **#36496236186 — PASS**
 
 Established:
 - project import before packaging
@@ -58,56 +46,99 @@ Established:
 - Windows Desktop export succeeds
 - `NicksLuminousValley.exe` exists after export
 - artifact upload succeeds
-- artifact ID: `11003955591`
-- artifact size: `38,936,427` bytes
-- artifact digest: `sha256:20dedfc3f8b60c61e044bb957093fb93e21433363443500e30507e487fb527da`
-- packaging pipeline merged to `main` at `468d3215aa12b6a950ad83ed91651dffc63081a2`
 
-Packaging evidence establishes reproducible build generation, not interactive play quality.
+Packaging pipeline merged at `468d3215aa12b6a950ad83ed91651dffc63081a2`.
 
 ## Art-ready runtime refactor evidence
 
-Environment: Godot 4.7.2 on GitHub Actions
-
-Godot Smoke run: **#36499794753 — PASS**  
-Windows Playtest Build run: **#36499794719 — PASS**
+Godot Smoke: **#36499794753 — PASS**  
+Windows Playtest Build: **#36499794719 — PASS**
 
 Established:
-- HUD extraction preserves runtime composition
-- world renderer extraction preserves gameplay presentation path
-- save-store extraction preserves save/load behavior
-- existing quest-state transitions remain unchanged
-- project import remains green
-- main-scene launch remains green
-- vertical-slice acceptance remains green
-- Windows export remains green
+- HUD extraction
+- world-renderer extraction
+- save-store extraction
+- quest semantics preserved
+- Windows packaging preserved
 
-Merged to `main` at:
-
-`87cc62a72c56493e72b1fe7a486b465851011887`
-
-This establishes a technically verified replacement seam for visual/UI/persistence iteration. It does not establish production-art quality or human acceptance.
+Merged at `87cc62a72c56493e72b1fe7a486b465851011887`.
 
 ## Asset-ingestion contract evidence
 
-Environment: Godot 4.7.2 on GitHub Actions
-
-Godot Smoke run: **#36500157438 — PASS**  
-Windows Playtest Build run: **#36500157460 — PASS**
+Godot Smoke: **#36500157438 — PASS**  
+Windows Playtest Build: **#36500157460 — PASS**
 
 Established:
-- visual manifest schema version 1 loads successfully
-- every current art slot may remain empty
-- empty/missing art slots safely fall back to procedural rendering
-- gameplay state-machine behavior remains green
-- save/load remains green
-- Windows export remains green
+- visual manifest schema v1
+- safe missing-slot fallback behavior
+- incremental art replacement mechanism
+- gameplay and export remain green
+
+Merged at `4b6bcaa6a1628b4578926e550aa8078a42bbc9e1`.
+
+## Authored character candidate evidence
+
+Godot Smoke: **#36500826480 — PASS**  
+Windows Playtest Build: **#36500826416 — PASS**
+
+Established:
+- Nick field asset imports/loads
+- Mira field asset imports/loads
+- Sora field asset imports/loads
+- gameplay and Windows packaging remain green
+
+Merged at `2c7d431825a820503b0d1c8e9360b5f8abe4ac2d`.
+
+State: **MACHINE-INTEGRATED CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
+## Authored environment candidate evidence
+
+Godot Smoke: **#36501057566 — PASS**  
+Windows Playtest Build: **#36501057490 — PASS**
+
+Established:
+- workshop yard candidate imports/loads
+- village green candidate imports/loads
+- grandfather's lab candidate imports/loads
+- creek/salvage candidate imports/loads
+- garden-before candidate imports/loads
+- garden-after candidate imports/loads
+- gameplay and Windows packaging remain green
+
+Merged at `f50ccba414aa7bcd9ab02fadb6187f630751adb7`.
+
+State: **MACHINE-INTEGRATED CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
+## Complete first authored visual candidate evidence
+
+Godot Smoke: **#36501323308 — PASS**  
+Windows Playtest Build: **#36501323360 — PASS**
 
 Merged to `main` at:
 
-`4b6bcaa6a1628b4578926e550aa8078a42bbc9e1`
+`8deace2bc28019c64de5ba4f4af1fa7ee07d2a9d`
 
-This establishes the mechanism for incremental production-art replacement. It does not establish that any production art has been authored, accepted, or visually validated.
+Established:
+- all **16/16** current visual manifest slots import and load
+- authored character slots resolve
+- authored environment slots resolve
+- four authored pickups resolve
+- lab bench, pump, and tower resolve
+- HUD exposes the new bordered hierarchy
+- dedicated interaction prompt panel instantiates
+- gameplay state machine remains green
+- save/load remains green
+- Windows export and artifact upload remain green
+
+State: **FIRST AUTHORED VISUAL CANDIDATE SET MACHINE-INTEGRATED**
+
+This state does not establish:
+- visual quality
+- JRPG/cozy identity
+- visual hierarchy
+- field readability
+- style cohesion
+- human/player acceptance
 
 ## Not established
 
@@ -118,7 +149,7 @@ Automated CI does **not** establish:
 - player comprehension without coaching
 - emotional impact
 - fun
-- production-art quality
+- accepted production-art quality
 - external-player acceptance
 
 These require interactive human play. See issue #7 and `docs/playtest-template.md`.

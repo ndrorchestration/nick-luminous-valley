@@ -29,7 +29,7 @@
 - establish human interactive acceptance
 
 ## M3 — First coherent visual identity
-**Status:** RENDERED REMEDIATION V2 IMPLEMENTED / HUMAN VISUAL ACCEPTANCE PENDING
+**Status:** LIGHTING/DEPTH V2 IMPLEMENTED / HUMAN VISUAL ACCEPTANCE PENDING
 
 Completed mechanically:
 - asset-ingestion contract
@@ -52,6 +52,7 @@ Completed mechanically:
 - first evidence-driven remediation — COMPLETE
 - Godot/Windows/visual-evidence CI green
 - field-motion / atmosphere v1 candidate — Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS
+- lighting / environmental-depth v2 candidate — Godot #36511353056 PASS; Windows #36511353032 PASS; Visual #36511353070 PASS
 
 Still required:
 - visible-window review
@@ -61,7 +62,7 @@ Still required:
 - style cohesion assessment
 - directional field-animation pass — **MACHINE-VERIFIED CANDIDATE COMPLETE**
 - atmospheric motion pass — **MACHINE-VERIFIED CANDIDATE COMPLETE**
-- lighting refinement pass
+- lighting refinement pass — **MACHINE-VERIFIED CANDIDATE COMPLETE**
 - further defect-driven revisions from human review
 - first music/ambient pass
 

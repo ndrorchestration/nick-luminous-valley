@@ -1,30 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="255" height="116" viewBox="0 0 255 116" shape-rendering="crispEdges">
 <rect width="255" height="116" fill="#254535"/>
-<rect x="0" y="76" width="255" height="40" fill="#6a6a43"/>
-<rect x="22" y="18" width="18" height="36" fill="#35592f"/>
-<rect x="16" y="12" width="30" height="20" fill="#62874f"/>
-<rect x="206" y="16" width="18" height="38" fill="#35592f"/>
-<rect x="198" y="10" width="34" height="22" fill="#6d9559"/>
-<rect x="78" y="20" width="96" height="10" fill="#708e61"/>
-<rect x="88" y="30" width="76" height="8" fill="#58744f"/>
-<rect x="104" y="54" width="48" height="18" fill="#496849"/>
-<rect x="112" y="48" width="32" height="8" fill="#88a56e"/>
-<rect x="120" y="72" width="12" height="34" fill="#6e6040"/>
-<rect x="92" y="84" width="66" height="8" fill="#867950"/>
+<!-- JRPG/cartoon convergence v1: rounder cartoon tree masses, brighter field accents, clearer social green. -->
+<rect x="0" y="76" width="255" height="40" fill="#786f45"/>
+<rect x="18" y="20" width="20" height="36" fill="#314f2c"/>
+<rect x="10" y="12" width="38" height="22" fill="#6ea65a"/>
+<rect x="18" y="8" width="24" height="12" fill="#8fbd66"/>
+<rect x="206" y="18" width="18" height="38" fill="#314f2c"/>
+<rect x="196" y="10" width="40" height="24" fill="#73ab5d"/>
+<rect x="206" y="6" width="24" height="12" fill="#94c46b"/>
+<rect x="76" y="20" width="100" height="12" fill="#86a867"/>
+<rect x="86" y="32" width="80" height="8" fill="#5f7f54"/>
+<rect x="100" y="54" width="56" height="20" fill="#466948"/>
+<rect x="110" y="48" width="36" height="8" fill="#9fb878"/>
+<rect x="120" y="72" width="12" height="34" fill="#73623e"/>
+<rect x="90" y="84" width="70" height="9" fill="#9a8557"/>
+<rect x="98" y="92" width="54" height="4" fill="#5d4f34"/>
 
-<!-- Environment detail v3: grass, flowers, and bench texture. -->
-<g opacity="0.88">
-  <rect x="54" y="24" width="3" height="8" fill="#6f9659"/>
-  <rect x="60" y="28" width="3" height="7" fill="#477443"/>
-  <rect x="184" y="24" width="3" height="8" fill="#789c5b"/>
-  <rect x="190" y="29" width="3" height="6" fill="#4e7848"/>
-  <rect x="58" y="56" width="3" height="3" fill="#d8c46b"/>
-  <rect x="66" y="62" width="3" height="3" fill="#d7a6a1"/>
-  <rect x="182" y="58" width="3" height="3" fill="#d8c46b"/>
-  <rect x="190" y="64" width="3" height="3" fill="#a9d5c0"/>
-  <rect x="102" y="87" width="46" height="2" fill="#aa9864"/>
+<g opacity="0.95">
+  <rect x="54" y="24" width="3" height="8" fill="#7fab5c"/>
+  <rect x="60" y="28" width="3" height="7" fill="#4e7e45"/>
+  <rect x="184" y="24" width="3" height="8" fill="#89b963"/>
+  <rect x="190" y="29" width="3" height="6" fill="#547f49"/>
+  <rect x="52" y="56" width="4" height="4" fill="#f0d46d"/>
+  <rect x="64" y="62" width="4" height="4" fill="#e9a8a3"/>
+  <rect x="182" y="58" width="4" height="4" fill="#f0d46d"/>
+  <rect x="192" y="64" width="4" height="4" fill="#a9e0c6"/>
+  <rect x="102" y="87" width="46" height="2" fill="#c8ae6c"/>
   <rect x="108" y="94" width="34" height="2" fill="#5f5437"/>
+  <rect x="30" y="84" width="12" height="4" fill="#9b8b5d"/>
+  <rect x="210" y="82" width="10" height="4" fill="#9b8b5d"/>
+  <rect x="122" y="36" width="10" height="3" fill="#d8c96c"/>
 </g>
-<path d="M24 48 l4 -7 l4 7 M214 48 l4 -7 l4 7" fill="none" stroke="#4f7744" stroke-width="2" opacity="0.78"/>
-
+<path d="M24 48 l4 -8 l4 8 M214 48 l4 -8 l4 8" fill="none" stroke="#4f7744" stroke-width="3" opacity="0.84"/>
+<path d="M72 74 C92 66 116 68 132 74 S174 80 194 70" fill="none" stroke="#9ac36d" stroke-width="3" opacity="0.5"/>
 </svg>

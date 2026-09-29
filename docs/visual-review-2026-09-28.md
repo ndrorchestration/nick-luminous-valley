@@ -63,3 +63,31 @@ Action:
 These findings are based on deterministic rendered frames, not interactive play.
 
 They support visual-remediation decisions but do not establish movement feel, pacing, fun, or human acceptance.
+
+
+## Remediation readback
+
+Remediation merge: `e1148324764d056556c67b04e2dcf134254d52ca`
+
+Fresh verification:
+- Godot Smoke `#36502420186` — **PASS**
+- Windows Playtest Build `#36502420202` — **PASS**
+- Visual Evidence Capture `#36502420148` — **PASS**
+- artifact `#11005544111`
+- digest `sha256:9188cad96b3c567907c3d020596ccba505e1da0da001dcc392a91b01f3773eff`
+
+Rendered comparison after remediation:
+- spatial cohesion: **MATERIALLY IMPROVED**
+- character/prop field scale: **IMPROVED**
+- grounding: **IMPROVED**
+- HUD proportion: **IMPROVED**
+- tower duplicate-render defect: **FIXED**
+- tower signal legibility: **IMPROVED**
+- garden transformation contrast: **PRESERVED**
+
+Remaining candidate-level gaps:
+- presentation remains visually simple/blocky relative to the polished cozy-JRPG target
+- field animation is not yet established
+- lighting/atmospheric depth remains limited
+- music/ambient identity is not established
+- human visual acceptance remains pending

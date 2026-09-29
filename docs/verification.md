@@ -183,6 +183,38 @@ Rendered comparison supports:
 
 State: **RENDERED VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
+## Field motion and atmospheric candidate
+
+Godot Smoke: **#36510776231 — PASS**  
+Windows Playtest Build: **#36510776222 — PASS**  
+Visual Evidence Capture: **#36510776274 — PASS**
+
+Exact branch head:
+
+`019bd2e29fbe8e2ad95798e47efcae3df1c289f2`
+
+Artifacts:
+- Windows playtest ID: `11009097725`
+- Windows digest: `sha256:3822a3df5323e1ed5b4db8aff909abff02ef611a096a15f8a8d28446df356891`
+- rendered visual evidence ID: `11009152621`
+- visual-evidence digest: `sha256:b450cff4af68823cc5cb806f3509267e5c0d58d813ba8238fa62f2b5d9530f69`
+
+Established:
+- deterministic motion profile v1 loads
+- player field motion varies over time with facing-direction bias
+- NPC candidate motion varies subtly over time
+- pickup motion varies over time
+- ambient field motes render
+- creek glints render
+- repaired-garden motes render when world state changes
+- tower signal sweep renders at the completion state
+- quest semantics remain green
+- save/load remains green
+- Windows packaging remains green
+- rendered-evidence capture remains green
+
+State: **MACHINE-VERIFIED MOTION/ATMOSPHERE CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
 ## Not established
 
 Automated CI does **not** establish:

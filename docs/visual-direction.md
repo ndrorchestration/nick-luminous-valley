@@ -44,8 +44,10 @@ Technical evidence:
 - complete candidate set: Godot #36501323308 PASS; Windows #36501323360 PASS
 - baseline rendered evidence: Visual #36501775914 PASS; artifact #11005607995
 - remediation: Godot #36502420186 PASS; Windows #36502420202 PASS; Visual #36502420148 PASS; artifact #11005544111
+- field-motion / atmosphere v1: Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS; Windows artifact #11009097725; visual artifact #11009152621
+- lighting / environmental-depth v2: Godot #36511622050 PASS; Windows #36511622117 PASS; Visual #36511622061 PASS; Windows artifact #11009134048; visual artifact #11009124029
 
-Current state: **RENDERED VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+Current state: **RENDERED + MOTION + LIGHTING/DEPTH V2 VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
 ## Visual objective
 
@@ -114,7 +116,11 @@ The current bordered HUD is a candidate implementation of this direction, not ac
 
 Current presentation uses authored SVG field/environment/prop candidates plus a full-field authored terrain/path layer routed through the asset manifest. The first rendered review identified spatial fragmentation, small entities, weak grounding, HUD dominance, and a duplicate tower path; the first remediation addressed each of those mechanically and produced materially stronger rendered frames.
 
-Human review must determine whether this format produces the desired pixel-informed/JRPG field look at 960x540.
+Field-motion / atmosphere v1 adds deterministic player-facing motion bias, subtle NPC breathing/bob motion, floating pickups, creek glints, ambient field motes, post-repair garden motes, and a tower signal sweep without changing quest semantics or the visual-manifest schema.
+
+Lighting / environmental-depth v2 adds shallow localized light-temperature cues, creek-bank depth lines, reeds, and boundary foliage. These are presentation-only additions: collision, quest semantics, authored asset slots, and interaction geometry remain unchanged.
+
+Human review must determine whether this format and motion layer produce the desired pixel-informed/JRPG field look at 960x540.
 
 ## Art acceptance criteria
 

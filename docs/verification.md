@@ -183,6 +183,66 @@ Rendered comparison supports:
 
 State: **RENDERED VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
+## Field motion and atmospheric candidate
+
+Godot Smoke: **#36510776231 — PASS**  
+Windows Playtest Build: **#36510776222 — PASS**  
+Visual Evidence Capture: **#36510776274 — PASS**
+
+Exact branch head:
+
+`019bd2e29fbe8e2ad95798e47efcae3df1c289f2`
+
+Artifacts:
+- Windows playtest ID: `11009097725`
+- Windows digest: `sha256:3822a3df5323e1ed5b4db8aff909abff02ef611a096a15f8a8d28446df356891`
+- rendered visual evidence ID: `11009152621`
+- visual-evidence digest: `sha256:b450cff4af68823cc5cb806f3509267e5c0d58d813ba8238fa62f2b5d9530f69`
+
+Established:
+- deterministic motion profile v1 loads
+- player field motion varies over time with facing-direction bias
+- NPC candidate motion varies subtly over time
+- pickup motion varies over time
+- ambient field motes render
+- creek glints render
+- repaired-garden motes render when world state changes
+- tower signal sweep renders at the completion state
+- quest semantics remain green
+- save/load remains green
+- Windows packaging remains green
+- rendered-evidence capture remains green
+
+State: **MACHINE-VERIFIED MOTION/ATMOSPHERE CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
+## Lighting and environmental-depth v2
+
+Godot Smoke: **#36511622050 — PASS**  
+Windows Playtest Build: **#36511622117 — PASS**  
+Visual Evidence Capture: **#36511622061 — PASS**
+
+Exact runtime/test head:
+
+`5d911a030463f1d0d750696c9dd1438715469914`
+
+Artifacts:
+- Windows playtest ID: `11009134048`
+- Windows digest: `sha256:fa3780a0b3425b0719486e0245e3f85dee726b18566eb75d93b2aaa1f148e7ec`
+- rendered visual evidence ID: `11009124029`
+- visual-evidence digest: `sha256:d1f70a480d6b78cf10f7316b48002a3dbe8b3e345e2b7c499ca39e942f44e0f8`
+
+Established:
+- presentation profile v2 loads under smoke acceptance
+- localized light-temperature cues render
+- creek bank/reed depth cues render
+- boundary foliage renders
+- quest semantics remain green
+- save/load remains green
+- Windows packaging remains green
+- rendered-evidence capture remains green
+
+State: **MACHINE-VERIFIED LIGHTING/DEPTH CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
 ## Not established
 
 Automated CI does **not** establish:

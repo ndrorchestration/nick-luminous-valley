@@ -45,7 +45,7 @@ Technical evidence:
 - baseline rendered evidence: Visual #36501775914 PASS; artifact #11005607995
 - remediation: Godot #36502420186 PASS; Windows #36502420202 PASS; Visual #36502420148 PASS; artifact #11005544111
 - field-motion / atmosphere v1: Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS; Windows artifact #11009097725; visual artifact #11009152621
-- lighting / environmental-depth v2: Godot #36511353056 PASS; Windows #36511353032 PASS; Visual #36511353070 PASS; Windows artifact #11009315397; visual artifact #11009600073
+- lighting / environmental-depth v2: Godot #36511622050 PASS; Windows #36511622117 PASS; Visual #36511622061 PASS; Windows artifact #11009134048; visual artifact #11009124029
 
 Current state: **RENDERED + MOTION + LIGHTING/DEPTH V2 VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 

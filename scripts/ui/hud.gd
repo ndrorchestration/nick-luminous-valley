@@ -6,20 +6,22 @@ var inventory_label: Label
 var trust_label: Label
 var message_label: Label
 var hint_label: Label
+var hint_panel: Panel
 
 func build_ui() -> void:
-	_add_panel(Vector2(12, 6), Vector2(620, 88), Color(0.03, 0.08, 0.06, 0.78))
-	_add_panel(Vector2(638, 6), Vector2(310, 66), Color(0.03, 0.08, 0.06, 0.72))
-	_add_panel(Vector2(12, 476), Vector2(936, 56), Color(0.03, 0.08, 0.06, 0.88))
+	_add_panel(Vector2(12, 6), Vector2(620, 88), Color(0.025, 0.07, 0.055, 0.92), Color("78bfae"))
+	_add_panel(Vector2(638, 6), Vector2(310, 66), Color(0.025, 0.07, 0.055, 0.88), Color("718f9b"))
+	_add_panel(Vector2(12, 476), Vector2(936, 56), Color(0.025, 0.06, 0.05, 0.94), Color("c0a864"))
+	hint_panel = _add_panel(Vector2(610, 438), Vector2(338, 34), Color(0.04, 0.12, 0.09, 0.94), Color("8bd9ba"))
 
-	title_label = _make_label(Vector2(18, 12), Vector2(520, 28), 20)
-	objective_label = _make_label(Vector2(18, 41), Vector2(620, 25), 16)
-	inventory_label = _make_label(Vector2(18, 68), Vector2(210, 22), 14)
-	trust_label = _make_label(Vector2(230, 68), Vector2(210, 22), 14)
-	hint_label = _make_label(Vector2(620, 450), Vector2(320, 24), 15)
-	message_label = _make_label(Vector2(24, 484), Vector2(912, 44), 15)
+	title_label = _make_label(Vector2(22, 14), Vector2(500, 26), 20, Color("f5e7a9"))
+	objective_label = _make_label(Vector2(22, 42), Vector2(596, 24), 16, Color("d8eee5"))
+	inventory_label = _make_label(Vector2(22, 68), Vector2(210, 20), 14, Color("e8cf83"))
+	trust_label = _make_label(Vector2(235, 68), Vector2(210, 20), 14, Color("9ddbb5"))
+	hint_label = _make_label(Vector2(624, 445), Vector2(310, 22), 15, Color("e9fff5"))
+	message_label = _make_label(Vector2(26, 485), Vector2(904, 40), 15, Color("f5f0d8"))
 
-	var help := _make_label(Vector2(650, 14), Vector2(290, 52), 13)
+	var help := _make_label(Vector2(650, 14), Vector2(290, 52), 13, Color("b9cbc6"))
 	help.text = "Move: arrows / WASD\nInteract: Enter / Space   Save: F5   Load: F9"
 
 func refresh(title: String, objective: String, part_count: int, trust: int, message: String, hint: String) -> void:
@@ -29,20 +31,33 @@ func refresh(title: String, objective: String, part_count: int, trust: int, mess
 	trust_label.text = "Village trust: %d" % trust
 	message_label.text = message
 	hint_label.text = hint
+	hint_panel.visible = not hint.is_empty()
 
-func _add_panel(pos: Vector2, dimensions: Vector2, color: Color) -> void:
-	var panel := ColorRect.new()
+func _add_panel(pos: Vector2, dimensions: Vector2, color: Color, border_color: Color) -> Panel:
+	var panel := Panel.new()
 	panel.position = pos
 	panel.size = dimensions
-	panel.color = color
+	var style := StyleBoxFlat.new()
+	style.bg_color = color
+	style.border_color = border_color
+	style.border_width_left = 2
+	style.border_width_top = 2
+	style.border_width_right = 2
+	style.border_width_bottom = 2
+	style.corner_radius_top_left = 4
+	style.corner_radius_top_right = 4
+	style.corner_radius_bottom_left = 4
+	style.corner_radius_bottom_right = 4
+	panel.add_theme_stylebox_override("panel", style)
 	add_child(panel)
+	return panel
 
-func _make_label(pos: Vector2, dimensions: Vector2, font_size: int) -> Label:
+func _make_label(pos: Vector2, dimensions: Vector2, font_size: int, font_color: Color) -> Label:
 	var label := Label.new()
 	label.position = pos
 	label.size = dimensions
 	label.add_theme_font_size_override("font_size", font_size)
-	label.add_theme_color_override("font_color", Color("eef7e8"))
+	label.add_theme_color_override("font_color", font_color)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	add_child(label)
 	return label

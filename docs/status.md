@@ -4,9 +4,9 @@ Date: 2026-09-28
 
 ## Main
 
-Current authored visual candidate baseline is merged to `main` at:
+Current rendered-remediation baseline is merged to `main` at:
 
-`8deace2bc28019c64de5ba4f4af1fa7ee07d2a9d`
+`e1148324764d056556c67b04e2dcf134254d52ca`
 
 Supporting milestones:
 - Windows-playtest packaging: `468d3215aa12b6a950ad83ed91651dffc63081a2`
@@ -16,6 +16,9 @@ Supporting milestones:
 - Incremental production-art ingestion: `4b6bcaa6a1628b4578926e550aa8078a42bbc9e1`
 - Character candidate pass: `2c7d431825a820503b0d1c8e9360b5f8abe4ac2d`
 - Environment candidate pass: `f50ccba414aa7bcd9ab02fadb6187f630751adb7`
+- Complete first authored candidate set: `8deace2bc28019c64de5ba4f4af1fa7ee07d2a9d`
+- Rendered visual evidence infrastructure: `0de3f835c7c07ec0ff991e918b3a60dfc92635af`
+- First evidence-driven visual remediation: `e1148324764d056556c67b04e2dcf134254d52ca`
 
 ## Current capabilities
 
@@ -38,11 +41,15 @@ Supporting milestones:
 - versioned visual-asset manifest
 - safe per-slot texture loading
 - procedural fallback for partial art sets
-- **16/16 current visual slots populated with authored candidate assets**
+- **17/17 current visual slots populated with authored candidate assets**, including a cohesive world-base layer
 - authored Nick, Mira, and Sora field sprites
 - authored workshop, village green, lab, creek, and garden before/after environment candidates
 - authored four pickups, lab bench, pump, and transmission tower
 - bordered HUD hierarchy and dedicated interaction prompt treatment
+- coherent world-base paths connecting the five authored zones
+- larger grounded characters/props
+- duplicate tower rendering removed
+- deterministic rendered visual-evidence capture
 - reproducible Windows Desktop export
 - runtime-only CI path filters and superseded-run cancellation
 
@@ -74,7 +81,19 @@ Complete first authored visual candidate set:
 - Godot Smoke **#36501323308 — PASS**
 - Windows Playtest Build **#36501323360 — PASS**
 
-This establishes machine integration, runtime compatibility, and reproducible packaging of the complete current visual candidate set.
+Rendered evidence infrastructure:
+- Godot Smoke **#36501775952 — PASS**
+- Windows Playtest Build **#36501775882 — PASS**
+- Visual Evidence Capture **#36501775914 — PASS**
+- baseline artifact **#11005607995**
+
+Evidence-driven visual remediation:
+- Godot Smoke **#36502420186 — PASS**
+- Windows Playtest Build **#36502420202 — PASS**
+- Visual Evidence Capture **#36502420148 — PASS**
+- remediation artifact **#11005544111**
+
+This establishes machine integration, runtime compatibility, reproducible packaging, and deterministic rendered evidence for the current visual candidate. Rendered review shows materially improved spatial cohesion, entity grounding, field scale, HUD proportion, and tower treatment.
 
 ## Current gate
 
@@ -100,7 +119,7 @@ Machine verification does not establish:
 1. Run the current Windows build in a visible window.
 2. Complete issue #7 human interactive acceptance.
 3. Review issues #13–#15 against `docs/visual-direction.md`.
-4. Repair visual/readability/usability defects found in that review.
+4. Continue evidence-driven visual refinement (directional field animation and atmospheric motion are the next technical candidates).
 5. External playtest.
 6. Add a second invention loop only if the core loop and presentation earn expansion.
 

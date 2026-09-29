@@ -31,6 +31,21 @@ func _run() -> void:
 	for slot_id in ["world_base","player","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
 		_check(world.world_renderer.asset_textures.has(slot_id), "Authored visual slot must load: %s" % slot_id)
 
+	for art_path in [
+		"res://assets/art/characters/nick_field_v1.svg",
+		"res://assets/art/characters/mira_field_v1.svg",
+		"res://assets/art/characters/sora_field_v1.svg",
+		"res://assets/art/environment/world_base_v2.svg",
+		"res://assets/art/environment/workshop_yard_v1.svg",
+		"res://assets/art/environment/village_green_v1.svg",
+		"res://assets/art/environment/grandfathers_lab_v1.svg",
+		"res://assets/art/environment/creek_salvage_v1.svg",
+		"res://assets/art/environment/garden_before_v1.svg",
+		"res://assets/art/environment/garden_after_v1.svg"
+	]:
+		var source := FileAccess.get_file_as_string(art_path)
+		_check(source.contains("JRPG/cartoon convergence v1"), "JRPG/cartoon convergence marker must exist: %s" % art_path)
+
 	var player_motion_a: Vector2 = world.world_renderer._motion_offset("player", Vector2.RIGHT, 0.0)
 	var player_motion_b: Vector2 = world.world_renderer._motion_offset("player", Vector2.RIGHT, 0.25)
 	_check(not player_motion_a.is_equal_approx(player_motion_b), "Player field motion must vary over time.")

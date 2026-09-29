@@ -2,6 +2,7 @@ extends Node2D
 
 const ASSET_MANIFEST_PATH := "res://data/visual_assets.json"
 const ASSET_CATALOG = preload("res://scripts/world/asset_catalog.gd")
+const MOTION_PROFILE_VERSION := 1
 
 var points: Array = []
 var inventory: Dictionary = {}
@@ -12,6 +13,7 @@ var facing := Vector2.DOWN
 var elapsed := 0.0
 var nearest_id := ""
 
+var motion_enabled := true
 var asset_manifest: Dictionary = {}
 var asset_textures: Dictionary = {}
 
@@ -55,12 +57,31 @@ func _slot_entry(slot_id: String) -> Dictionary:
 func _slot_texture(slot_id: String) -> Texture2D:
 	return asset_textures.get(slot_id, null)
 
-func _draw_slot(slot_id: String, center: Vector2, fallback_size: Vector2) -> bool:
+func _motion_phase(slot_id: String) -> float:
+	return deg_to_rad(float(abs(slot_id.hash()) % 360))
+
+func _motion_offset(slot_id: String, source_facing: Vector2, time_value: float) -> Vector2:
+	if not motion_enabled:
+		return Vector2.ZERO
+
+	var phase := _motion_phase(slot_id)
+	if slot_id == "player":
+		var direction := source_facing.normalized() if source_facing.length() > 0.001 else Vector2.DOWN
+		return direction * 1.5 + Vector2(0, sin(time_value * 8.0) * 1.4)
+	if slot_id in ["mira", "sora"]:
+		return Vector2(0, sin(time_value * 2.4 + phase) * 0.8)
+	if slot_id in ["wire", "solar", "pipe", "resin"]:
+		return Vector2(0, sin(time_value * 3.3 + phase) * 2.2)
+	if slot_id == "tower" and stage >= 5:
+		return Vector2(0, sin(time_value * 4.0) * 0.7)
+	return Vector2.ZERO
+
+func _draw_slot(slot_id: String, center: Vector2, fallback_size: Vector2, offset := Vector2.ZERO) -> bool:
 	var texture := _slot_texture(slot_id)
 	if texture == null:
 		return false
 	var size := ASSET_CATALOG.size_from_entry(_slot_entry(slot_id), fallback_size)
-	var rect := Rect2(center - size * 0.5, size)
+	var rect := Rect2(center + offset - size * 0.5, size)
 	draw_texture_rect(texture, rect, false)
 	return true
 
@@ -87,6 +108,32 @@ func _draw_zone(rect: Rect2, fill: Color, edge: Color, label: String, label_pos:
 
 func _draw_entity_shadow(pos: Vector2, radius: float) -> void:
 	draw_circle(pos + Vector2(0, 11), radius, Color(0, 0, 0, 0.24))
+
+func _draw_atmosphere() -> void:
+	if not motion_enabled:
+		return
+
+	for i in range(9):
+		var mote_x := 34.0 + fposmod(float(i * 113) + elapsed * 7.0, 892.0)
+		var mote_y := 116.0 + fposmod(float(i * 67) + sin(elapsed * 0.8 + float(i)) * 18.0, 320.0)
+		var mote_alpha := 0.025 + 0.025 * (0.5 + 0.5 * sin(elapsed * 1.7 + float(i)))
+		draw_circle(Vector2(mote_x, mote_y), 1.2, Color(0.82, 0.96, 0.84, mote_alpha))
+
+	for i in range(6):
+		var glint_x := 92.0 + fposmod(float(i * 97) + elapsed * 28.0, 540.0)
+		var glint_y := 382.0 + sin(elapsed * 2.0 + float(i)) * 6.0
+		draw_line(Vector2(glint_x, glint_y), Vector2(glint_x + 11.0, glint_y), Color(0.55, 0.90, 0.96, 0.16), 1.0)
+
+	if world_changed:
+		for i in range(8):
+			var garden_x := 716.0 + fposmod(float(i * 31) + elapsed * 10.0, 184.0)
+			var garden_y := 300.0 + fposmod(float(i * 47) - elapsed * 8.0, 116.0)
+			var pulse := 0.08 + 0.07 * (0.5 + 0.5 * sin(elapsed * 2.3 + float(i)))
+			draw_circle(Vector2(garden_x, garden_y), 1.6, Color(0.72, 1.0, 0.66, pulse))
+
+	if stage >= 5:
+		var sweep := 455.0 + fposmod(elapsed * 46.0, 110.0)
+		draw_line(Vector2(sweep, 112), Vector2(sweep + 18.0, 112), Color(0.68, 0.98, 1.0, 0.12), 1.0)
 
 func _draw() -> void:
 	draw_rect(Rect2(0, 0, 960, 540), Color("0e2119"))
@@ -124,6 +171,8 @@ func _draw() -> void:
 		var water_color := Color("6fc7dd") if world_changed else Color("315c68")
 		draw_line(Vector2(720, 286), Vector2(900, 286), water_color, 5.0 if world_changed else 2.0)
 
+	_draw_atmosphere()
+
 	if world_changed:
 		var shimmer := 3.0 + sin(elapsed * 5.0) * 1.5
 		draw_circle(Vector2(820, 285), 21.0 + shimmer, Color(0.3, 0.75, 0.85, 0.10))
@@ -148,7 +197,8 @@ func _draw() -> void:
 		if nearest_id == point_id:
 			draw_circle(point.pos, 24.0 + sin(elapsed * 6.0), Color(0.78, 1.0, 0.9, 0.10))
 
-		var used_asset := _draw_slot(point_id, point.pos, Vector2(32, 32))
+		var point_offset := _motion_offset(point_id, Vector2.ZERO, elapsed)
+		var used_asset := _draw_slot(point_id, point.pos, Vector2(32, 32), point_offset)
 		if used_asset:
 			continue
 
@@ -159,9 +209,10 @@ func _draw() -> void:
 			color = Color("e7cb70")
 		elif point.kind == "station":
 			color = Color("88b6e6")
-		draw_circle(point.pos, 10.0, color)
+		draw_circle(point.pos + point_offset, 10.0, color)
 
 	_draw_entity_shadow(player_position, 11.0)
-	if not _draw_slot("player", player_position, Vector2(42, 42)):
-		draw_circle(player_position, 12.0, Color("f4d66e"))
+	var player_offset := _motion_offset("player", facing, elapsed)
+	if not _draw_slot("player", player_position, Vector2(42, 42), player_offset):
+		draw_circle(player_position + player_offset, 12.0, Color("f4d66e"))
 	draw_line(player_position + Vector2(0, 1), player_position + facing * 18.0, Color(1.0, 0.96, 0.70, 0.72), 2.0)

@@ -1,6 +1,17 @@
 name: Visual Evidence Capture
 
 on:
+  push:
+    branches:
+      - "ci/**"
+    paths:
+      - "project.godot"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/capture_visual_evidence.gd"
+      - ".github/workflows/visual-evidence.yml"
   pull_request:
     branches:
       - main

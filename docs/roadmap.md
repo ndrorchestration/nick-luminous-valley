@@ -52,7 +52,7 @@ Completed mechanically:
 - first evidence-driven remediation — COMPLETE
 - Godot/Windows/visual-evidence CI green
 - field-motion / atmosphere v1 candidate — Godot #36510776231 PASS; Windows #36510776222 PASS; Visual #36510776274 PASS
-- lighting / environmental-depth v2 candidate — Godot #36511353056 PASS; Windows #36511353032 PASS; Visual #36511353070 PASS
+- lighting / environmental-depth v2 candidate — Godot #36511622050 PASS; Windows #36511622117 PASS; Visual #36511622061 PASS
 
 Still required:
 - visible-window review

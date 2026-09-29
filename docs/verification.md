@@ -140,6 +140,49 @@ This state does not establish:
 - style cohesion
 - human/player acceptance
 
+## Rendered visual evidence infrastructure
+
+Godot Smoke: **#36501775952 — PASS**  
+Windows Playtest Build: **#36501775882 — PASS**  
+Visual Evidence Capture: **#36501775914 — PASS**
+
+Artifact:
+- ID: `11005607995`
+- digest: `sha256:d0b0d1cd869b53d9743c53d5c970740c422f52bb276c2124c3dd68548a278844`
+- four deterministic 960×540 PNG checkpoints
+
+Merged at `0de3f835c7c07ec0ff991e918b3a60dfc92635af`.
+
+Established:
+- the live Godot scene can be rendered under a virtual display
+- opening, lab/components, restored-garden, and tower-ending frames can be captured deterministically
+- screenshots can be retained as inspectable artifacts
+
+This provides rendered implementation evidence, not interactive human acceptance.
+
+## First evidence-driven visual remediation
+
+Godot Smoke: **#36502420186 — PASS**  
+Windows Playtest Build: **#36502420202 — PASS**  
+Visual Evidence Capture: **#36502420148 — PASS**
+
+Artifact:
+- ID: `11005544111`
+- digest: `sha256:9188cad96b3c567907c3d020596ccba505e1da0da001dcc392a91b01f3773eff`
+
+Merged at `e1148324764d056556c67b04e2dcf134254d52ca`.
+
+Rendered comparison supports:
+- materially stronger spatial cohesion
+- larger/more readable field entities
+- improved entity grounding
+- reduced HUD dominance
+- removal of duplicate tower rendering
+- clearer tower signal treatment
+- preserved garden before/after contrast
+
+State: **RENDERED VISUAL CANDIDATE IMPROVED / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
 ## Not established
 
 Automated CI does **not** establish:

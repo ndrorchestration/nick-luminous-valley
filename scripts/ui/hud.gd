@@ -9,20 +9,20 @@ var hint_label: Label
 var hint_panel: Panel
 
 func build_ui() -> void:
-	_add_panel(Vector2(12, 6), Vector2(620, 88), Color(0.025, 0.07, 0.055, 0.92), Color("78bfae"))
-	_add_panel(Vector2(638, 6), Vector2(310, 66), Color(0.025, 0.07, 0.055, 0.88), Color("718f9b"))
-	_add_panel(Vector2(12, 476), Vector2(936, 56), Color(0.025, 0.06, 0.05, 0.94), Color("c0a864"))
-	hint_panel = _add_panel(Vector2(610, 438), Vector2(338, 34), Color(0.04, 0.12, 0.09, 0.94), Color("8bd9ba"))
+	_add_panel(Vector2(12, 6), Vector2(574, 76), Color(0.025, 0.07, 0.055, 0.92), Color("78bfae"))
+	_add_panel(Vector2(598, 6), Vector2(350, 58), Color(0.025, 0.07, 0.055, 0.86), Color("718f9b"))
+	_add_panel(Vector2(12, 484), Vector2(936, 48), Color(0.025, 0.06, 0.05, 0.94), Color("c0a864"))
+	hint_panel = _add_panel(Vector2(648, 448), Vector2(300, 30), Color(0.04, 0.12, 0.09, 0.94), Color("8bd9ba"))
 
-	title_label = _make_label(Vector2(22, 14), Vector2(500, 26), 20, Color("f5e7a9"))
-	objective_label = _make_label(Vector2(22, 42), Vector2(596, 24), 16, Color("d8eee5"))
-	inventory_label = _make_label(Vector2(22, 68), Vector2(210, 20), 14, Color("e8cf83"))
-	trust_label = _make_label(Vector2(235, 68), Vector2(210, 20), 14, Color("9ddbb5"))
-	hint_label = _make_label(Vector2(624, 445), Vector2(310, 22), 15, Color("e9fff5"))
-	message_label = _make_label(Vector2(26, 485), Vector2(904, 40), 15, Color("f5f0d8"))
+	title_label = _make_label(Vector2(22, 12), Vector2(540, 22), 18, Color("f5e7a9"))
+	objective_label = _make_label(Vector2(22, 37), Vector2(548, 21), 15, Color("d8eee5"))
+	inventory_label = _make_label(Vector2(22, 60), Vector2(190, 18), 13, Color("e8cf83"))
+	trust_label = _make_label(Vector2(215, 60), Vector2(180, 18), 13, Color("9ddbb5"))
+	hint_label = _make_label(Vector2(660, 454), Vector2(276, 18), 14, Color("e9fff5"))
+	message_label = _make_label(Vector2(26, 492), Vector2(904, 32), 14, Color("f5f0d8"))
 
-	var help := _make_label(Vector2(650, 14), Vector2(290, 52), 13, Color("b9cbc6"))
-	help.text = "Move: arrows / WASD\nInteract: Enter / Space   Save: F5   Load: F9"
+	var help := _make_label(Vector2(610, 14), Vector2(326, 40), 12, Color("b9cbc6"))
+	help.text = "Move: WASD / arrows   •   Enter: interact\nF5: save   •   F9: load"
 
 func refresh(title: String, objective: String, part_count: int, trust: int, message: String, hint: String) -> void:
 	title_label.text = title

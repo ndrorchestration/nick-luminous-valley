@@ -1,72 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="388" viewBox="0 0 960 388" shape-rendering="crispEdges">
 <rect width="960" height="388" fill="#173629"/>
-<rect x="0" y="0" width="960" height="388" fill="#1b3d2d"/>
-<rect x="0" y="0" width="960" height="8" fill="#244d38"/>
-<rect x="0" y="376" width="960" height="12" fill="#112b22"/>
+<rect x="0" y="0" width="960" height="388" fill="#1f4630"/>
+<rect x="0" y="0" width="960" height="8" fill="#2c5d3e"/>
+<rect x="0" y="376" width="960" height="12" fill="#10271f"/>
 
-<path d="M20 184 H280 V104 H430 H610 V170 H790 V228" fill="none" stroke="#6f6848" stroke-width="28"/>
-<path d="M430 104 V246 H530 V318" fill="none" stroke="#71694a" stroke-width="24"/>
-<path d="M790 228 V308 H860" fill="none" stroke="#6a6548" stroke-width="22"/>
-<path d="M104 184 V260" fill="none" stroke="#645f43" stroke-width="18"/>
+<!-- JRPG/cartoon convergence v1: chunkier hand-authored path ribbons with tile-like broken edges. -->
+<path d="M20 184 H274 V104 H438 H610 V170 H790 V228" fill="none" stroke="#806f49" stroke-width="32"/>
+<path d="M20 184 H274 V104 H438 H610 V170 H790 V228" fill="none" stroke="#a3915f" stroke-width="4" opacity="0.55"/>
+<path d="M430 104 V246 H530 V318" fill="none" stroke="#7b704c" stroke-width="28"/>
+<path d="M430 104 V246 H530 V318" fill="none" stroke="#a79763" stroke-width="3" opacity="0.55"/>
+<path d="M790 228 V308 H860" fill="none" stroke="#766c49" stroke-width="26"/>
+<path d="M104 184 V260" fill="none" stroke="#706746" stroke-width="22"/>
 
-<path d="M0 284 H690" fill="none" stroke="#17313a" stroke-width="70"/>
-<path d="M0 266 H690" fill="none" stroke="#355e5b" stroke-width="8"/>
-<path d="M0 302 H690" fill="none" stroke="#2d5960" stroke-width="28"/>
-<path d="M0 302 H690" fill="none" stroke="#5aa8b3" stroke-width="3"/>
-<rect x="490" y="260" width="62" height="84" fill="#75694b"/>
-<rect x="498" y="264" width="46" height="76" fill="#8a7d56"/>
-<rect x="505" y="264" width="4" height="76" fill="#5d553f"/>
-<rect x="533" y="264" width="4" height="76" fill="#5d553f"/>
+<!-- Creek and salvage bridge, with readable cartoon water bands. -->
+<path d="M0 284 H690" fill="none" stroke="#17313a" stroke-width="76"/>
+<path d="M0 266 H690" fill="none" stroke="#335f5f" stroke-width="10"/>
+<path d="M0 302 H690" fill="none" stroke="#2f6470" stroke-width="30"/>
+<path d="M0 302 H690" fill="none" stroke="#72c4cd" stroke-width="4"/>
+<rect x="486" y="256" width="70" height="90" fill="#6c6044"/>
+<rect x="496" y="262" width="50" height="78" fill="#97895e"/>
+<rect x="504" y="262" width="5" height="78" fill="#5d553f"/>
+<rect x="532" y="262" width="5" height="78" fill="#5d553f"/>
+<rect x="492" y="252" width="60" height="6" fill="#b09b62"/>
 
-<rect x="10" y="28" width="16" height="12" fill="#2d5a3b"/>
-<rect x="284" y="26" width="22" height="16" fill="#315f3d"/>
-<rect x="595" y="22" width="18" height="13" fill="#315e3d"/>
-<rect x="920" y="46" width="24" height="16" fill="#28563a"/>
-<rect x="18" y="232" width="22" height="16" fill="#2f6141"/>
-<rect x="674" y="220" width="18" height="13" fill="#315e3d"/>
-<rect x="934" y="246" width="16" height="12" fill="#2c593b"/>
-
-<rect x="300" y="190" width="12" height="8" fill="#31523b"/>
-<rect x="330" y="222" width="18" height="10" fill="#36593f"/>
-<rect x="590" y="214" width="14" height="8" fill="#36593f"/>
-<rect x="626" y="252" width="20" height="10" fill="#31523b"/>
-<rect x="856" y="138" width="16" height="10" fill="#315a3d"/>
-<rect x="900" y="190" width="24" height="12" fill="#2d563b"/>
-
-<rect x="54" y="330" width="18" height="10" fill="#596448"/>
-<rect x="220" y="342" width="22" height="12" fill="#596448"/>
-<rect x="718" y="338" width="18" height="10" fill="#4e6245"/>
-<rect x="884" y="350" width="28" height="12" fill="#4d6044"/>
-
-<!-- Environment detail v3: restrained pixel-material variation. -->
-<g opacity="0.72">
-  <rect x="48" y="72" width="10" height="4" fill="#315b3f"/>
-  <rect x="68" y="78" width="5" height="3" fill="#3a6646"/>
-  <rect x="252" y="54" width="8" height="4" fill="#2b573c"/>
-  <rect x="278" y="62" width="4" height="3" fill="#46734d"/>
-  <rect x="350" y="44" width="7" height="4" fill="#315d40"/>
-  <rect x="584" y="54" width="8" height="4" fill="#3a6645"/>
-  <rect x="616" y="64" width="5" height="3" fill="#48754f"/>
-  <rect x="812" y="84" width="7" height="4" fill="#335f41"/>
-  <rect x="888" y="112" width="5" height="3" fill="#426f4b"/>
-  <rect x="748" y="198" width="8" height="4" fill="#315a3d"/>
-  <rect x="926" y="204" width="5" height="3" fill="#44714c"/>
-  <rect x="380" y="238" width="8" height="4" fill="#2e573c"/>
+<!-- Cartoon tree/shrub clusters framing the field. -->
+<g>
+  <rect x="6" y="24" width="18" height="14" fill="#20452f"/><rect x="14" y="18" width="28" height="20" fill="#4f874c"/><rect x="22" y="12" width="16" height="10" fill="#79aa5b"/>
+  <rect x="282" y="24" width="22" height="18" fill="#224b31"/><rect x="294" y="16" width="30" height="22" fill="#5a9151"/><rect x="310" y="12" width="12" height="10" fill="#8ab863"/>
+  <rect x="594" y="20" width="18" height="15" fill="#20482f"/><rect x="606" y="14" width="28" height="20" fill="#5b9151"/><rect x="618" y="10" width="14" height="8" fill="#86b760"/>
+  <rect x="914" y="44" width="25" height="18" fill="#1f462e"/><rect x="926" y="34" width="32" height="24" fill="#548c4d"/><rect x="940" y="30" width="14" height="8" fill="#83b65d"/>
+  <rect x="18" y="230" width="22" height="16" fill="#244e34"/><rect x="30" y="224" width="30" height="18" fill="#5b9352"/>
+  <rect x="672" y="218" width="18" height="14" fill="#20472f"/><rect x="682" y="212" width="28" height="18" fill="#5e9553"/>
+  <rect x="930" y="242" width="18" height="14" fill="#214832"/><rect x="938" y="236" width="26" height="18" fill="#57904f"/>
 </g>
-<g opacity="0.76">
-  <rect x="286" y="94" width="18" height="4" fill="#8b8158"/>
-  <rect x="316" y="94" width="12" height="4" fill="#82774f"/>
-  <rect x="610" y="160" width="16" height="4" fill="#8b8055"/>
-  <rect x="640" y="166" width="10" height="4" fill="#80764f"/>
-  <rect x="775" y="216" width="12" height="4" fill="#887e54"/>
-  <rect x="808" y="248" width="14" height="4" fill="#82784f"/>
+
+<!-- JRPG tile language: grass, stones, flowers, and path chips. -->
+<g opacity="0.94">
+  <rect x="48" y="72" width="10" height="4" fill="#3f744a"/><rect x="68" y="78" width="5" height="3" fill="#86b963"/>
+  <rect x="252" y="54" width="8" height="4" fill="#356b44"/><rect x="278" y="62" width="4" height="3" fill="#d9c76b"/>
+  <rect x="350" y="44" width="7" height="4" fill="#3c7449"/><rect x="584" y="54" width="8" height="4" fill="#7fb55e"/>
+  <rect x="616" y="64" width="5" height="3" fill="#e0a6a0"/><rect x="812" y="84" width="7" height="4" fill="#3d7048"/>
+  <rect x="888" y="112" width="5" height="3" fill="#9dcc72"/><rect x="748" y="198" width="8" height="4" fill="#386c44"/>
+  <rect x="926" y="204" width="5" height="3" fill="#d8c46a"/><rect x="380" y="238" width="8" height="4" fill="#376a43"/>
+  <rect x="116" y="126" width="6" height="3" fill="#c7b36f"/><rect x="152" y="156" width="5" height="3" fill="#89b95f"/>
+  <rect x="452" y="86" width="7" height="3" fill="#ddc76f"/><rect x="568" y="148" width="6" height="3" fill="#e2a6a0"/>
+  <rect x="724" y="262" width="6" height="3" fill="#88bb63"/><rect x="882" y="286" width="7" height="4" fill="#d8c46a"/>
 </g>
 <g opacity="0.82">
-  <rect x="18" y="270" width="28" height="3" fill="#477b75"/>
-  <rect x="180" y="318" width="32" height="3" fill="#4d8990"/>
-  <rect x="370" y="286" width="38" height="2" fill="#6ab6bd"/>
-  <rect x="572" y="314" width="26" height="3" fill="#4f8e95"/>
-  <rect x="640" y="280" width="18" height="3" fill="#447a79"/>
+  <rect x="286" y="94" width="18" height="4" fill="#a08f5c"/><rect x="316" y="94" width="12" height="4" fill="#87784e"/>
+  <rect x="610" y="160" width="16" height="4" fill="#9e8e5c"/><rect x="640" y="166" width="10" height="4" fill="#86784e"/>
+  <rect x="775" y="216" width="12" height="4" fill="#9b8b59"/><rect x="808" y="248" width="14" height="4" fill="#897a4f"/>
+  <rect x="440" y="238" width="14" height="4" fill="#8f8054"/><rect x="512" y="318" width="18" height="4" fill="#9d8e5f"/>
+</g>
+<g opacity="0.86">
+  <rect x="18" y="270" width="32" height="3" fill="#5fa8a4"/><rect x="180" y="318" width="36" height="3" fill="#63b2b9"/>
+  <rect x="370" y="286" width="42" height="2" fill="#89d2d7"/><rect x="572" y="314" width="30" height="3" fill="#64aeb6"/>
+  <rect x="640" y="280" width="22" height="3" fill="#4e8c89"/><rect x="246" y="298" width="26" height="2" fill="#7fc9ce"/>
 </g>
 
+<!-- Bottom foreground foliage and stones for depth. -->
+<g>
+  <rect x="54" y="330" width="18" height="10" fill="#66764d"/><rect x="68" y="326" width="10" height="6" fill="#8fb760"/>
+  <rect x="220" y="342" width="22" height="12" fill="#67784d"/><rect x="238" y="338" width="8" height="6" fill="#9cc86a"/>
+  <rect x="718" y="338" width="18" height="10" fill="#5c7449"/><rect x="884" y="350" width="28" height="12" fill="#596f47"/>
+  <rect x="812" y="340" width="16" height="8" fill="#92845d"/><rect x="850" y="354" width="10" height="6" fill="#786e51"/>
+</g>
 </svg>

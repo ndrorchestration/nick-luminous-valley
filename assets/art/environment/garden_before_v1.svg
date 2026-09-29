@@ -15,4 +15,14 @@
 <rect x="190" y="146" width="5" height="6" fill="#6d7445"/>
 <rect x="16" y="22" width="150" height="4" fill="#315c68"/>
 <rect x="166" y="22" width="34" height="4" fill="#2a4148"/>
+
+<!-- Environment detail v3: dry furrows, cracks, and wilt silhouettes. -->
+<g opacity="0.82">
+  <rect x="18" y="98" width="42" height="2" fill="#6c5637"/>
+  <rect x="88" y="116" width="42" height="2" fill="#684f33"/>
+  <rect x="158" y="142" width="42" height="2" fill="#6a5235"/>
+</g>
+<path d="M34 84 l-5 7 l7 5 l-4 8 M108 98 l-6 8 l8 6 l-5 9 M178 126 l-5 8 l7 5 l-4 9" fill="none" stroke="#3f3629" stroke-width="2" opacity="0.72"/>
+<path d="M26 82 v-9 l-5 -5 M98 82 v-9 l5 -5 M170 88 v-10 l-5 -5 M192 154 v-8 l5 -5" fill="none" stroke="#687044" stroke-width="2" opacity="0.78"/>
+
 </svg>

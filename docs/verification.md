@@ -243,6 +243,35 @@ Established:
 
 State: **MACHINE-VERIFIED LIGHTING/DEPTH CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
 
+## Environment material-detail v3
+
+Godot Smoke: **#36512026477 — PASS**  
+Windows Playtest Build: **#36512026476 — PASS**  
+Visual Evidence Capture: **#36512026501 — PASS**
+
+Exact implementation head:
+
+`0849cc0cd932b7bd0461d24d95118589a11a48a3`
+
+Artifacts:
+- Windows playtest ID: `11009801104`
+- Windows digest: `sha256:bb120e0d480f70f99b1b236a1be1a7f333c0e5c0b80e1861705f049e09ef82c2`
+- rendered visual evidence ID: `11009114744`
+- visual-evidence digest: `sha256:4093705f9017f19015b7e772088600d5dd7cf3f8401a41e575d8b03ec41be1ee`
+
+Established:
+- all authored environment textures continue to import/load
+- workshop, village-green, lab, creek, and garden detail additions render
+- before/after garden contrast remains intact
+- movement and quest semantics remain green
+- save/load remains green
+- Windows packaging remains green
+- rendered-evidence capture remains green
+
+Rendered comparison supports increased material/detail density without an observed navigation regression in the deterministic capture. This is implementation evidence, not human visual acceptance.
+
+State: **MACHINE-VERIFIED ENVIRONMENT-DETAIL CANDIDATE / HUMAN VISUAL ACCEPTANCE NOT ESTABLISHED**
+
 ## Not established
 
 Automated CI does **not** establish:

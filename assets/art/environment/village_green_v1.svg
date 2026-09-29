@@ -11,4 +11,20 @@
 <rect x="112" y="48" width="32" height="8" fill="#88a56e"/>
 <rect x="120" y="72" width="12" height="34" fill="#6e6040"/>
 <rect x="92" y="84" width="66" height="8" fill="#867950"/>
+
+<!-- Environment detail v3: grass, flowers, and bench texture. -->
+<g opacity="0.88">
+  <rect x="54" y="24" width="3" height="8" fill="#6f9659"/>
+  <rect x="60" y="28" width="3" height="7" fill="#477443"/>
+  <rect x="184" y="24" width="3" height="8" fill="#789c5b"/>
+  <rect x="190" y="29" width="3" height="6" fill="#4e7848"/>
+  <rect x="58" y="56" width="3" height="3" fill="#d8c46b"/>
+  <rect x="66" y="62" width="3" height="3" fill="#d7a6a1"/>
+  <rect x="182" y="58" width="3" height="3" fill="#d8c46b"/>
+  <rect x="190" y="64" width="3" height="3" fill="#a9d5c0"/>
+  <rect x="102" y="87" width="46" height="2" fill="#aa9864"/>
+  <rect x="108" y="94" width="34" height="2" fill="#5f5437"/>
+</g>
+<path d="M24 48 l4 -7 l4 7 M214 48 l4 -7 l4 7" fill="none" stroke="#4f7744" stroke-width="2" opacity="0.78"/>
+
 </svg>

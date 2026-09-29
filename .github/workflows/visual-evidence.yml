@@ -1,0 +1,80 @@
+name: Visual Evidence Capture
+
+on:
+  push:
+    branches:
+      - "ci/**"
+    paths:
+      - "project.godot"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/capture_visual_evidence.gd"
+      - ".github/workflows/visual-evidence.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "project.godot"
+      - "scenes/**"
+      - "scripts/**"
+      - "data/**"
+      - "assets/**"
+      - "tests/capture_visual_evidence.gd"
+      - ".github/workflows/visual-evidence.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: visual-evidence-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Godot 4.7.2
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.7.2
+          use-dotnet: false
+          include-templates: false
+
+      - name: Install virtual display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+
+      - name: Import project
+        run: godot --headless --path . --editor --quit
+
+      - name: Run gameplay acceptance
+        run: godot --headless --path . --script tests/vertical_slice_smoke.gd
+
+      - name: Capture rendered checkpoints
+        run: xvfb-run -a godot --path . --script tests/capture_visual_evidence.gd
+
+      - name: Verify evidence frames
+        run: |
+          test -f visual-evidence/01_opening.png
+          test -f visual-evidence/02_components_and_lab.png
+          test -f visual-evidence/03_restored_garden.png
+          test -f visual-evidence/04_tower_signal.png
+          file visual-evidence/*.png
+          ls -lh visual-evidence
+
+      - name: Upload visual evidence
+        uses: actions/upload-artifact@v6
+        with:
+          name: Nicks-Luminous-Valley-Visual-Evidence
+          path: visual-evidence/
+          if-no-files-found: error
+          retention-days: 14

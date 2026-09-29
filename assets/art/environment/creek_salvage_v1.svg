@@ -10,4 +10,19 @@
 <rect x="74" y="28" width="18" height="8" fill="#8b8060"/>
 <rect x="324" y="30" width="24" height="8" fill="#92876a"/>
 <rect x="500" y="24" width="16" height="10" fill="#a89264"/>
+
+<!-- Environment detail v3: varied water, stones, and reed silhouettes. -->
+<g opacity="0.82">
+  <rect x="8" y="31" width="38" height="2" fill="#82c7cc"/>
+  <rect x="112" y="38" width="46" height="2" fill="#4f9ca6"/>
+  <rect x="218" y="25" width="34" height="2" fill="#79bdc5"/>
+  <rect x="374" y="36" width="42" height="2" fill="#4e9da7"/>
+  <rect x="526" y="29" width="48" height="2" fill="#7bc1c7"/>
+  <rect x="52" y="18" width="10" height="6" fill="#778064"/>
+  <rect x="182" y="43" width="14" height="6" fill="#84785c"/>
+  <rect x="392" y="14" width="12" height="6" fill="#6b765b"/>
+  <rect x="548" y="43" width="16" height="6" fill="#887c5d"/>
+</g>
+<path d="M18 22 l3 -10 l3 10 M24 22 l4 -8 l2 8 M560 22 l2 -10 l4 10 M566 22 l4 -8 l2 8" fill="none" stroke="#657d4e" stroke-width="2" opacity="0.84"/>
+
 </svg>

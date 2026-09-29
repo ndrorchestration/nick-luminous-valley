@@ -21,10 +21,11 @@ func _run() -> void:
 	await process_frame
 
 	_check(world.hud != null, "HUD must be composed as a dedicated runtime component.")
+	_check(world.hud.hint_panel != null, "HUD must expose a dedicated interaction prompt panel.")
 	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
 	_check(int(world.world_renderer.asset_manifest.get("schema_version", 0)) == 1, "Visual asset manifest schema version must be 1.")
-	_check(world.world_renderer.asset_textures.size() == 9, "Character + environment pass must load exactly nine authored textures.")
-	for slot_id in ["player","mira","sora","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
+	_check(world.world_renderer.asset_textures.size() == 16, "First authored pass must load all sixteen visual slots.")
+	for slot_id in ["player","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
 		_check(world.world_renderer.asset_textures.has(slot_id), "Authored visual slot must load: %s" % slot_id)
 	_check(world.points.size() == 9, "Content model must load nine interaction points.")
 	_check(world.stage == 0, "Initial quest stage must be 0.")
@@ -35,7 +36,6 @@ func _run() -> void:
 	world.player_position = Vector2(260, 150)
 	world._interact()
 	_check(world.stage == 1, "Mira must advance stage 0 -> 1.")
-
 	world.player_position = Vector2(430, 120)
 	world._interact()
 	_check(world.stage == 2, "Sora must advance stage 1 -> 2.")
@@ -45,25 +45,20 @@ func _run() -> void:
 		world._interact()
 
 	_check(world.inventory.size() == 3, "Three pickups must produce three collected parts.")
-
 	world.player_position = Vector2(700, 160)
 	world._interact()
 	_check(world.stage == 2, "Lab must block progression with a missing part.")
-
 	world.player_position = Vector2(710, 350)
 	world._interact()
 	_check(world.inventory.size() == 4, "Fourth pickup must complete required parts.")
-
 	world.player_position = Vector2(700, 160)
 	world._interact()
 	_check(world.stage == 3, "Complete parts at lab must advance stage 2 -> 3.")
-
 	world.player_position = Vector2(820, 285)
 	world._interact()
 	_check(world.stage == 4, "Pump installation must advance stage 3 -> 4.")
 	_check(world.world_changed == true, "Pump installation must change world state.")
 	_check(world.village_trust == 1, "Pump installation must increase village trust.")
-
 	world.player_position = Vector2(510, 270)
 	world._interact()
 	_check(world.stage == 5, "Tower interaction must complete the vertical slice.")

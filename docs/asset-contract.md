@@ -22,10 +22,15 @@ If a slot path is empty, missing, or cannot be loaded as a texture, the renderer
 
 This is intentional: a partial visual pass must remain runnable.
 
+Directional Nick poses are optional. If the selected `player_back`, `player_left`, or `player_right` slot fails to load, render `player` instead; retain the procedural circle if the frontal asset is also absent. This preserves existing saves, movement and manifest schema version 1.
+
 ## Current slots
 
 ### Characters / entities
-- `player`
+- `player` (Nick facing down; backward-compatible fallback)
+- `player_back` (Nick facing up)
+- `player_left` (Nick facing left)
+- `player_right` (Nick facing right)
 - `mira`
 - `sora`
 

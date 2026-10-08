@@ -4,6 +4,9 @@
   "slots": {
     "world_base": {"path": "res://assets/art/environment/world_base_v2.svg", "rect": [0, 82, 960, 388]},
     "player": {"path": "res://assets/art/characters/nick_field_v1.svg", "size": [42, 42]},
+    "player_back": {"path": "res://assets/art/characters/nick_back_v1.svg", "size": [42, 42]},
+    "player_left": {"path": "res://assets/art/characters/nick_left_v1.svg", "size": [42, 42]},
+    "player_right": {"path": "res://assets/art/characters/nick_right_v1.svg", "size": [42, 42]},
     "mira": {"path": "res://assets/art/characters/mira_field_v1.svg", "size": [40, 40]},
     "sora": {"path": "res://assets/art/characters/sora_field_v1.svg", "size": [40, 40]},
     "wire": {"path": "res://assets/art/props/copper_wire_v1.svg", "size": [24, 24]},

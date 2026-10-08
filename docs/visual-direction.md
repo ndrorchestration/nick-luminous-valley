@@ -8,10 +8,10 @@ The first authored visual candidate set is now mechanically implemented. This do
 
 ## Current implementation state
 
-The current visual manifest has **17/17 populated candidate slots**, including a cohesive full-field world-base layer:
+The visual manifest has **20/20 populated candidate slots**, including a cohesive full-field world-base layer and three additional cardinal-direction poses for Nick:
 
 Characters:
-- Nick
+- Nick (front, back, left and right field poses; optional directional fallback)
 - Mira
 - Sora
 

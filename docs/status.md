@@ -1,12 +1,16 @@
 # Project Status
 
-Date: 2026-09-28
+Date: 2026-10-08
 
 ## Main
 
-Current rendered-remediation baseline is merged to `main` at:
+Current merged `main` is the JRPG HUD v2 presentation baseline at:
 
-`e1148324764d056556c67b04e2dcf134254d52ca`
+`c4385a45c7892600069ead6d4f85a13030585106`
+
+The earlier rendered-remediation baseline was merged at `e1148324764d056556c67b04e2dcf134254d52ca`; it is no longer the latest main head.
+
+The `art/nick-directional-field-v1` worktree is a separate **candidate**, not merged, human-approved, or live-verified. It adds three cardinal facing poses while retaining the original front pose, existing interactions, save shape, and visual manifest schema 1.
 
 Supporting milestones:
 - Windows-playtest packaging: `468d3215aa12b6a950ad83ed91651dffc63081a2`

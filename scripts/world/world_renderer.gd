@@ -4,6 +4,7 @@ const ASSET_MANIFEST_PATH := "res://data/visual_assets.json"
 const ASSET_CATALOG = preload("res://scripts/world/asset_catalog.gd")
 const MOTION_PROFILE_VERSION := 1
 const PRESENTATION_PROFILE_VERSION := 2
+const CHARACTER_POSE_PROFILE_VERSION := 1
 
 var points: Array = []
 var inventory: Dictionary = {}
@@ -57,6 +58,14 @@ func _slot_entry(slot_id: String) -> Dictionary:
 
 func _slot_texture(slot_id: String) -> Texture2D:
 	return asset_textures.get(slot_id, null)
+
+func _player_slot_for_facing(source_facing: Vector2) -> String:
+	# Cardinal poses share the original frontal sprite as a safe fallback.
+	if abs(source_facing.x) > abs(source_facing.y):
+		return "player_right" if source_facing.x > 0.0 else "player_left"
+	if source_facing.y < -0.01:
+		return "player_back"
+	return "player"
 
 func _motion_phase(slot_id: String) -> float:
 	return deg_to_rad(float(abs(slot_id.hash()) % 360))
@@ -257,6 +266,11 @@ func _draw() -> void:
 
 	_draw_entity_shadow(player_position, 11.0)
 	var player_offset := _motion_offset("player", facing, elapsed)
-	if not _draw_slot("player", player_position, Vector2(42, 42), player_offset):
+	var player_slot := _player_slot_for_facing(facing)
+	var player_drawn := _draw_slot(player_slot, player_position, Vector2(42, 42), player_offset)
+	if not player_drawn and player_slot != "player":
+		player_drawn = _draw_slot("player", player_position, Vector2(42, 42), player_offset)
+	if not player_drawn:
 		draw_circle(player_position + player_offset, 12.0, Color("f4d66e"))
-	draw_line(player_position + Vector2(0, 1), player_position + facing * 18.0, Color(1.0, 0.96, 0.70, 0.72), 2.0)
+		# The directional hint is needed only for the procedural fallback.
+		draw_line(player_position + Vector2(0, 1), player_position + facing * 18.0, Color(1.0, 0.96, 0.70, 0.72), 2.0)

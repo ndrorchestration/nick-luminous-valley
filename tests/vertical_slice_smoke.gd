@@ -31,10 +31,16 @@ func _run() -> void:
 	_check(world.world_renderer != null, "World renderer must be composed as a dedicated runtime component.")
 	_check(world.world_renderer.MOTION_PROFILE_VERSION == 1, "Field motion profile version must be 1.")
 	_check(world.world_renderer.PRESENTATION_PROFILE_VERSION == 2, "Presentation profile version must be 2.")
+	_check(world.world_renderer.CHARACTER_POSE_PROFILE_VERSION == 1, "Directional character pose profile must be 1.")
+	_check(world.world_renderer._player_slot_for_facing(Vector2.DOWN) == "player", "Downward Nick pose must use the original front art.")
+	_check(world.world_renderer._player_slot_for_facing(Vector2.UP) == "player_back", "Upward Nick pose must use rear art.")
+	_check(world.world_renderer._player_slot_for_facing(Vector2.LEFT) == "player_left", "Leftward Nick pose must use the left art.")
+	_check(world.world_renderer._player_slot_for_facing(Vector2.RIGHT) == "player_right", "Rightward Nick pose must use the right art.")
+	_check(world.world_renderer._player_slot_for_facing(Vector2(2.0, -1.0)) == "player_right", "Diagonal facing must choose the dominant axis.")
 	_check(world.world_renderer.motion_enabled == true, "Field motion must default to enabled.")
 	_check(int(world.world_renderer.asset_manifest.get("schema_version", 0)) == 1, "Visual asset manifest schema version must be 1.")
-	_check(world.world_renderer.asset_textures.size() == 17, "Visual remediation pass must load all seventeen visual slots.")
-	for slot_id in ["world_base","player","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
+	_check(world.world_renderer.asset_textures.size() == 20, "Cardinal Nick poses and original art must load all twenty visual slots.")
+	for slot_id in ["world_base","player","player_back","player_left","player_right","mira","sora","wire","solar","pipe","resin","lab","pump","tower","zone_workshop","zone_green","zone_lab","zone_creek","garden_before","garden_after"]:
 		_check(world.world_renderer.asset_textures.has(slot_id), "Authored visual slot must load: %s" % slot_id)
 
 	for art_path in [
@@ -51,6 +57,14 @@ func _run() -> void:
 	]:
 		var source := FileAccess.get_file_as_string(art_path)
 		_check(source.contains("JRPG/cartoon convergence v1"), "JRPG/cartoon convergence marker must exist: %s" % art_path)
+
+	for pose_path in [
+		"res://assets/art/characters/nick_back_v1.svg",
+		"res://assets/art/characters/nick_left_v1.svg",
+		"res://assets/art/characters/nick_right_v1.svg"
+	]:
+		var pose_source := FileAccess.get_file_as_string(pose_path)
+		_check(pose_source.contains("Directional Nick field sprites v1"), "Cardinal pose art must be authored and version-marked: %s" % pose_path)
 
 	var player_motion_a: Vector2 = world.world_renderer._motion_offset("player", Vector2.RIGHT, 0.0)
 	var player_motion_b: Vector2 = world.world_renderer._motion_offset("player", Vector2.RIGHT, 0.25)

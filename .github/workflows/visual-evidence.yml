@@ -68,6 +68,9 @@ jobs:
           test -f visual-evidence/02_components_and_lab.png
           test -f visual-evidence/03_restored_garden.png
           test -f visual-evidence/04_tower_signal.png
+          test -f visual-evidence/05_nick_facing_up.png
+          test -f visual-evidence/06_nick_facing_left.png
+          test -f visual-evidence/07_nick_facing_right.png
           file visual-evidence/*.png
           ls -lh visual-evidence
 
